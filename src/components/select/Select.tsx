@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const Menu = () => {
+export const Select = () => {
   return (
     <div>
-      
+      EN
     </div>
   );
 };
