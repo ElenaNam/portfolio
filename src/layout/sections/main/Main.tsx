@@ -18,6 +18,10 @@ export const Main = () => {
                 <Note>Currently working on Portfolio</Note>
             </div>
         </FlexWrapper>
+        <QuoteBox>
+            <QuoteTitle>With great power comes great electricity bill</QuoteTitle>
+            <QuoteAuthor>- Dr. Who</QuoteAuthor>
+        </QuoteBox>
     </StyledMain>
   );
 };
@@ -43,4 +47,16 @@ const Note = styled.div`
         height: 16px;
         background-color: #C778DD;
     }
+`
+
+const QuoteBox = styled.div`
+
+`
+
+const QuoteTitle = styled.div`
+
+`
+
+const QuoteAuthor = styled.div`
+
 `
