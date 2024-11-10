@@ -40,7 +40,7 @@ export const Projects = () => {
   );
 };
 
-const StyledProjects = styled.div``;
+const StyledProjects = styled.section``;
 
 const StyledLink = styled.a`
     &:after {
