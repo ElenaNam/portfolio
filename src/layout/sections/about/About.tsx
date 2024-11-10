@@ -3,10 +3,12 @@ import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Button } from '../../../components/button/Button.styled';
 import img from '../../../assets/images/person-2.png'
+import { SectionTitle } from '../../../components/SectionTitle';
 
 export const About = () => {
   return (
     <StyledAbout>
+        <SectionTitle hasLine widthLine='326px'>about-me</SectionTitle>
       <FlexWrapper>
         <div>
             <Text>Hello, i’m Elias!</Text>
