@@ -1,62 +1,60 @@
-import React from 'react';
-import styled from 'styled-components';
-import { FlexWrapper } from '../../../components/FlexWrapper';
-import { Button } from '../../../components/button/Button.styled';
-import Img from '../../../assets/images/person-1.png'
+import React from "react";
+import styled from "styled-components";
+import { FlexWrapper } from "../../../components/FlexWrapper";
+import { Button } from "../../../components/button/Button.styled";
+import Img from "../../../assets/images/person-1.png";
+import { Container } from "../../../components/Container";
 
 export const Main = () => {
   return (
     <StyledMain>
+      <Container>
         <FlexWrapper>
-            <div>
-                <h1>Elias is a web designer and front-end developer</h1>
-                <span>He crafts responsive websites where technologies meet creativity</span>
-                <Button bgColor='#C778DD'>Contact me!!</Button>
-            </div>
-            <div>
-                <Photo src={Img} alt='' /> 
-                <Note>Currently working on Portfolio</Note>
-            </div>
+          <div>
+            <h1>Elias is a web designer and front-end developer</h1>
+            <span>
+              He crafts responsive websites where technologies meet creativity
+            </span>
+            <Button bgColor="#C778DD">Contact me!!</Button>
+          </div>
+          <div>
+            <Photo src={Img} alt="" />
+            <Note>Currently working on Portfolio</Note>
+          </div>
         </FlexWrapper>
         <QuoteBox>
-            <QuoteTitle>With great power comes great electricity bill</QuoteTitle>
-            <QuoteAuthor>- Dr. Who</QuoteAuthor>
+          <QuoteTitle>With great power comes great electricity bill</QuoteTitle>
+          <QuoteAuthor>- Dr. Who</QuoteAuthor>
         </QuoteBox>
+      </Container>
     </StyledMain>
   );
 };
 
-
 const StyledMain = styled.section`
-    //min-height: 100vh;
-`
+  //min-height: 100vh;
+`;
 
 const Photo = styled.img`
-    width: 100%;
-    max-width: 469px;
-    height: 100%;
-    max-height: 386px;
-    object-fit: cover;
-`
+  width: 100%;
+  max-width: 469px;
+  height: 100%;
+  max-height: 386px;
+  object-fit: cover;
+`;
 
 const Note = styled.div`
-    &:before {
-        content: '';
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        background-color: #C778DD;
-    }
-`
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #c778dd;
+  }
+`;
 
-const QuoteBox = styled.div`
+const QuoteBox = styled.div``;
 
-`
+const QuoteTitle = styled.div``;
 
-const QuoteTitle = styled.div`
-
-`
-
-const QuoteAuthor = styled.div`
-
-`
+const QuoteAuthor = styled.div``;
