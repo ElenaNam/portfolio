@@ -52,6 +52,7 @@ export const GlobalStyles = createGlobalStyle`
         font-family: "Fira Code", monospace;
         background-color: ${theme.colors.primary};
         color: ${theme.colors.secondary};
+        line-height: 1.2;
     }
 
     ul {
@@ -62,9 +63,11 @@ export const GlobalStyles = createGlobalStyle`
     a {
         text-decoration: none;
         color: inherit;
+        transition: all .3s;
     }
 
     button {
         color: inherit;
+        cursor: pointer;
     }
 `

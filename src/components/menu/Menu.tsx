@@ -1,24 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 import { Select } from "../select/Select";
+import { MenuItemInterface } from "../../layout/header/Header";
+import { theme } from "../../styles/Theme";
 
-export const Menu = () => {
+interface MenuPropsInterface {
+  items: MenuItemInterface[];
+}
+
+export const Menu: React.FC<MenuPropsInterface> = ({ items }) => {
   return (
     <StyledBox>
       <StyledNav>
         <ul>
-          <li>
-            <a href="/home">home</a>
-          </li>
-          <li>
-            <a href="/works">works</a>
-          </li>
-          <li>
-            <a href="/about">about-me</a>
-          </li>
-          <li>
-            <a href="/contacts">contacts</a>
-          </li>
+          {items.map((item) => (
+            <li key={item.id}>
+              <a href={item.link} className={item.id === 0 ? "active" : ""}>
+                {item.title}
+              </a>
+            </li>
+          ))}
         </ul>
       </StyledNav>
       <Select />
@@ -30,7 +31,8 @@ const StyledBox = styled.div`
   display: flex;
   gap: 32px;
   align-items: center;
-`
+`;
+
 const StyledNav = styled.nav`
   ul {
     display: flex;
@@ -38,22 +40,26 @@ const StyledNav = styled.nav`
   }
 
   a {
-    color: #abb2bf;
+    color: ${theme.colors.secondary};
     font-weight: 400;
-  }
 
-  a:hover {
-    color: #fff;
-    font-weight: 500;
-
-    &:before {
-      font-weight: 500;
+    :hover {
+      color: ${theme.colors.main};
     }
-  }
 
-  a:before {
-    content: "#";
-    color: #c778dd;
-    font-weight: 400;
+    :before {
+      content: "#";
+      color: ${theme.colors.accent};
+      font-weight: 400;
+    }
+
+    &.active {
+      color: ${theme.colors.main};
+      font-weight: 500;
+
+      &:before {
+        font-weight: 500;
+      }
+    }
   }
 `;
