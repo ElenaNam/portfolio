@@ -5,7 +5,6 @@ import FiraCodeSemiBold from "../assets/fonts/FiraCode-SemiBold.ttf";
 import FiraCodeBold from "../assets/fonts/FiraCode-Bold.ttf";
 import { theme } from "./Theme";
 
-
 export const GlobalStyles = createGlobalStyle`
 
     @font-face {
@@ -53,6 +52,7 @@ export const GlobalStyles = createGlobalStyle`
         background-color: ${theme.colors.primary};
         color: ${theme.colors.secondary};
         line-height: 1.2;
+        scroll-behavior: smooth;
     }
 
     ul {
@@ -69,5 +69,10 @@ export const GlobalStyles = createGlobalStyle`
     button {
         color: inherit;
         cursor: pointer;
+        transition: all .3s;
     }
-`
+
+    section {
+        padding: 56px 0;
+    }
+`;

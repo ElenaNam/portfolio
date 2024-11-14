@@ -4,28 +4,32 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Button } from "../../../components/button/Button.styled";
 import Img from "../../../assets/images/person-1.png";
 import { Container } from "../../../components/Container";
+import { theme } from "../../../styles/Theme";
 
 export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper>
-          <div>
-            <h1>Elias is a web designer and front-end developer</h1>
-            <span>
-              He crafts responsive websites where technologies meet creativity
-            </span>
-            <Button bgColor="#C778DD">Contact me!!</Button>
-          </div>
-          <div>
+        <FlexWrapper justify="space-between">
+          <Info>
+            <FlexWrapper direction="column">
+              <Title>
+                Elias is a <span>web designer</span> and{" "}
+                <span>front-end developer</span>
+              </Title>
+              <Description>
+                He crafts responsive websites where technologies meet creativity
+              </Description>
+              <Button as="a" href="#contacts" colored>
+                Contact me!!
+              </Button>
+            </FlexWrapper>
+          </Info>
+          <PhotoWrapper>
             <Photo src={Img} alt="" />
-            <Note>Currently working on Portfolio</Note>
-          </div>
+            <Note>Currently working on&nbsp;<span>Portfolio</span></Note>
+          </PhotoWrapper>
         </FlexWrapper>
-        <QuoteBox>
-          <QuoteTitle>With great power comes great electricity bill</QuoteTitle>
-          <QuoteAuthor>- Dr. Who</QuoteAuthor>
-        </QuoteBox>
       </Container>
     </StyledMain>
   );
@@ -33,7 +37,32 @@ export const Main = () => {
 
 const StyledMain = styled.section`
   //min-height: 100vh;
+  padding-top: 112px;
 `;
+
+const Info = styled.div`
+  padding: 74px 18px 0 0;
+  max-width: 535px;
+`;
+const Title = styled.h1`
+  font-size: 32px;
+  font-weight: 600;
+
+  span {
+    color: ${theme.colors.accent};
+  }
+`;
+
+const Description = styled.span`
+  display: inline-block;
+  max-width: 85%;
+  margin: 32px 0 24px;
+  line-height: 1.5;
+`;
+
+const PhotoWrapper = styled.div`
+  font-size: 0;
+`
 
 const Photo = styled.img`
   width: 100%;
@@ -44,17 +73,30 @@ const Photo = styled.img`
 `;
 
 const Note = styled.div`
+  display: flex;
+  align-items: center;
+
+  max-width: 402px;
+  margin: 0 auto;
+  padding: 7px;
+
+  border: 1px solid ${theme.colors.secondary};
+  font-size: 16px;
+  font-weight: 500;
+
   &:before {
     content: "";
     display: inline-block;
     width: 16px;
     height: 16px;
-    background-color: #c778dd;
+    margin-right: 10px;
+    background-color: ${theme.colors.accent}
+  }
+
+  span {
+    color: ${theme.colors.main};
+    font-weight: 600;
   }
 `;
 
-const QuoteBox = styled.div``;
 
-const QuoteTitle = styled.div``;
-
-const QuoteAuthor = styled.div``;

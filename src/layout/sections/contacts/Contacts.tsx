@@ -7,7 +7,7 @@ import { Container } from "../../../components/Container";
 
 export const Contacts = () => {
   return (
-    <StyledContacts>
+    <StyledContacts id='contacts'>
       <Container>
         <SectionTitle hasLine>contacts</SectionTitle>
         <FlexWrapper>

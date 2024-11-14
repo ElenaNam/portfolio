@@ -7,34 +7,33 @@ import { FlexWrapper } from "../../components/FlexWrapper";
 import { theme } from "../../styles/Theme";
 
 export interface MenuItemInterface {
-  id: number
-  title: string
-  link: string
+  id: number;
+  title: string;
+  link: string;
 }
 
 const dataMenuItems: Array<MenuItemInterface> = [
   {
-    id: 0, 
-    title: 'home',
-    link: '/'
+    id: 0,
+    title: "home",
+    link: "/",
   },
   {
-    id: 1, 
-    title: 'works',
-    link: '/works/'
+    id: 1,
+    title: "works",
+    link: "/works/",
   },
   {
-    id: 2, 
-    title: 'about-me',
-    link: '/about/'
+    id: 2,
+    title: "about-me",
+    link: "/about/",
   },
   {
-    id: 3, 
-    title: 'contacts',
-    link: '/contacts/'
+    id: 3,
+    title: "contacts",
+    link: "/contacts/",
   },
-
-]
+];
 
 export const Header = () => {
   return (
