@@ -8,7 +8,7 @@ import { Container } from "../../../components/Container";
 
 export const About = () => {
   return (
-    <StyledAbout>
+    <StyledAbout id="about">
       <Container>
         <SectionTitle hasLine widthLine="326px">
           about-me

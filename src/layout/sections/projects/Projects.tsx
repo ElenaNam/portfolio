@@ -11,7 +11,7 @@ import { Container } from "../../../components/Container";
 
 export const Projects = () => {
   return (
-    <StyledProjects>
+    <StyledProjects id="works">
       <Container>
         <FlexWrapper justify="space-between">
           <SectionTitle hasLine widthLine="511px">

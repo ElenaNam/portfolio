@@ -40,11 +40,40 @@ const dataSocials1 = [
     viewBox: "0 0 14 20",
   },
 ];
+
+export interface MenuItemInterface {
+  id: number;
+  title: string;
+  link: string;
+}
+
+const dataMenuItems: Array<MenuItemInterface> = [
+  {
+    id: 0,
+    title: "home",
+    link: "/",
+  },
+  {
+    id: 1,
+    title: "works",
+    link: "#works",
+  },
+  {
+    id: 2,
+    title: "about-me",
+    link: "#about",
+  },
+  {
+    id: 3,
+    title: "contacts",
+    link: "#contacts",
+  },
+];
 function App() {
   return (
     <div className="App">
       <Aside list={dataSocials1} />
-      <Header />
+      <Header menu={dataMenuItems} />
       <Main />
       <Quote />
       <Projects />

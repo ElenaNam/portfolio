@@ -1,14 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { Select } from "../select/Select";
-import { MenuItemInterface } from "../../layout/header/Header";
+import { MenuItemInterface } from "../../App";
 import { theme } from "../../styles/Theme";
 
-interface MenuPropsInterface {
-  items: MenuItemInterface[];
-}
-
-export const Menu: React.FC<MenuPropsInterface> = ({ items }) => {
+export const Menu = ({ items }: { items: Array<MenuItemInterface> }) => {
   return (
     <StyledBox>
       <StyledNav>

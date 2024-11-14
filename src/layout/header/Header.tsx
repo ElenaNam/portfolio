@@ -5,43 +5,15 @@ import { Menu } from "../../components/menu/Menu";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { theme } from "../../styles/Theme";
+import { MenuItemInterface } from "../../App";
 
-export interface MenuItemInterface {
-  id: number;
-  title: string;
-  link: string;
-}
-
-const dataMenuItems: Array<MenuItemInterface> = [
-  {
-    id: 0,
-    title: "home",
-    link: "/",
-  },
-  {
-    id: 1,
-    title: "works",
-    link: "/works/",
-  },
-  {
-    id: 2,
-    title: "about-me",
-    link: "/about/",
-  },
-  {
-    id: 3,
-    title: "contacts",
-    link: "/contacts/",
-  },
-];
-
-export const Header = () => {
+export const Header = ({ menu }: { menu: Array<MenuItemInterface> }) => {
   return (
     <StyledHeader>
       <Container>
         <FlexWrapper justify="space-between" align="center">
           <Logo />
-          <Menu items={dataMenuItems} />
+          <Menu items={menu} />
         </FlexWrapper>
       </Container>
     </StyledHeader>
