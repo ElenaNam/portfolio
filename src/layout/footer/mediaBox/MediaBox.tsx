@@ -30,7 +30,7 @@ export const MediaBox = () => {
   return (
     <StyledMediaBox>
       <Title>Media</Title>
-      <Socials items={dataSocials2} />F
+      <Socials items={dataSocials2} />
     </StyledMediaBox>
   );
 };

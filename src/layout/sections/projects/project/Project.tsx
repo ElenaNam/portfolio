@@ -2,20 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { FlexWrapper } from '../../../../components/FlexWrapper';
 import { Button } from '../../../../components/button/Button.styled';
+import { ProjectInterface } from '../../../../App';
 
-
-type ProjectPropsType = {
-    imgSrc: string
-    stack: string
-    title: string
-    desc: string
-
-}
-export const Project = (props: ProjectPropsType) => {
+export const Project = (props: ProjectInterface) => {
   return (
     <StyledProject>
       <Image src={props.imgSrc} alt={props.title} />
-      <Stack>{props.stack}</Stack>
+      <Stack>{props.stack.map(item => `${item} `)}</Stack>
       <div>
         <h3>{props.title}</h3>
         <span>{props.desc}</span>

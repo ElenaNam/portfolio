@@ -9,12 +9,16 @@ import { Projects } from "./layout/sections/projects/Projects";
 import { Quote } from "./layout/sections/quote/Quote";
 import { Skills } from "./layout/sections/skills/Skills";
 
+import ImgProject1 from "./assets/images/project-1.png";
+import ImgProject2 from "./assets/images/project-2.png";
+import ImgProject3 from "./assets/images/project-3.png";
+
 export interface SocialItemInterface {
-  id: number;
-  title: string;
-  width: string;
-  height: string;
-  viewBox: string;
+  id: number
+  title: string
+  width: string
+  height: string
+  viewBox: string
 }
 
 const dataSocials1 = [
@@ -42,9 +46,9 @@ const dataSocials1 = [
 ];
 
 export interface MenuItemInterface {
-  id: number;
-  title: string;
-  link: string;
+  id: number
+  title: string
+  link: string
 }
 
 const dataMenuItems: Array<MenuItemInterface> = [
@@ -69,6 +73,42 @@ const dataMenuItems: Array<MenuItemInterface> = [
     link: "#contacts",
   },
 ];
+
+export interface ProjectInterface {
+  id?: number
+  title: string
+  desc: string
+  stack: string[]
+  link: string
+  imgSrc: string
+}
+
+const dataProjects: Array<ProjectInterface> = [
+  {
+    id: 0, 
+    title: "ChertNodes",
+    desc: "Minecraft servers hosting",
+    stack: ["HTML", "SCSS", "Python", "Flask"], 
+    link: "", 
+    imgSrc: ImgProject1
+  },
+  {
+    id: 1, 
+    title: "ProtectX",
+    desc: "Discord anti-crash bot",
+    stack: ["React", "Express", "Discord.js", "Node.js", "HTML", "SCSS", "Python", "Flask"], 
+    link: "", 
+    imgSrc: ImgProject2
+  },
+  {
+    id: 2, 
+    title: "Kahoot Answers Viewer",
+    desc: "Get answers to your kahoot quiz",
+    stack: ["CSS", "Express", "Node.js", "Flask"], 
+    link: "", 
+    imgSrc: ImgProject3
+  }
+]
 function App() {
   return (
     <div className="App">
@@ -76,7 +116,7 @@ function App() {
       <Header menu={dataMenuItems} />
       <Main />
       <Quote />
-      <Projects />
+      <Projects items={dataProjects} />
       <Skills />
       <About />
       <Contacts />
