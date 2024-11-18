@@ -18,7 +18,7 @@ export const Projects = ({items}:{items: Array<ProjectInterface>}) => {
           <StyledLink href="">View all</StyledLink>
         </FlexWrapper>
 
-        <FlexWrapper wrap="wrap" gap="16px">
+        <FlexWrapper wrap="wrap" gap="16px" align="flex-start">
           {
           items.map(item => <Project key={item.id}
             imgSrc={item.imgSrc}
@@ -26,6 +26,7 @@ export const Projects = ({items}:{items: Array<ProjectInterface>}) => {
             desc={item.desc}
             stack={item.stack}
             link={item.link}
+            isCached={item.id === 0 && true}
            />)}
 
         </FlexWrapper>
@@ -34,7 +35,9 @@ export const Projects = ({items}:{items: Array<ProjectInterface>}) => {
   );
 };
 
-const StyledProjects = styled.section``;
+const StyledProjects = styled.section`
+background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjgiIGhlaWdodD0iMTU1IiB2aWV3Qm94PSIwIDAgNjggMTU1IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB4PSIwLjUiIHk9IjAuNSIgd2lkdGg9IjE1NCIgaGVpZ2h0PSIxNTQiIHN0cm9rZT0iI0FCQjJCRiIvPgo8L3N2Zz4K') no-repeat right center;
+`;
 
 const StyledLink = styled.a`
   &:after {

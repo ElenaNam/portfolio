@@ -81,6 +81,7 @@ export interface ProjectInterface {
   stack: string[]
   link: string
   imgSrc: string
+  isCached?: boolean
 }
 
 const dataProjects: Array<ProjectInterface> = [
@@ -90,7 +91,8 @@ const dataProjects: Array<ProjectInterface> = [
     desc: "Minecraft servers hosting",
     stack: ["HTML", "SCSS", "Python", "Flask"], 
     link: "", 
-    imgSrc: ImgProject1
+    imgSrc: ImgProject1,
+    isCached: true
   },
   {
     id: 1, 
@@ -98,7 +100,8 @@ const dataProjects: Array<ProjectInterface> = [
     desc: "Discord anti-crash bot",
     stack: ["React", "Express", "Discord.js", "Node.js", "HTML", "SCSS", "Python", "Flask"], 
     link: "", 
-    imgSrc: ImgProject2
+    imgSrc: ImgProject2, 
+    isCached: false
   },
   {
     id: 2, 
@@ -106,7 +109,8 @@ const dataProjects: Array<ProjectInterface> = [
     desc: "Get answers to your kahoot quiz",
     stack: ["CSS", "Express", "Node.js", "Flask"], 
     link: "", 
-    imgSrc: ImgProject3
+    imgSrc: ImgProject3, 
+    isCached: false
   }
 ]
 function App() {
