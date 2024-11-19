@@ -20,9 +20,14 @@ export const Contact = (props: ContactPropsType) => {
 };
 
 const StyledContact = styled.a`
-    display: block;
+    display: flex;
+    align-items: center;
 
     svg {
         margin-right: 9px;
+    }
+
+    span {
+      line-height: 2;
     }
 `

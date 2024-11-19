@@ -1,23 +1,39 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Contact } from './contact/Contact';
+import React from "react";
+import styled from "styled-components";
+import { Contact } from "./contact/Contact";
+import { FlexWrapper } from "../../../../components/FlexWrapper";
 
 export const ContactsBox = () => {
   return (
     <StyledContactsBox>
       <Title>Message me here</Title>
-      <Contact iconId='discord' title='!Elias#3519' width='23px' height='17px' viewBox='0 0 23 17' />
-      <Contact iconId='email' title='elias@elias.me' width='23px' height='17px' viewBox='0 0 23 17' />
+      <FlexWrapper direction="column" gap="8px">
+        <Contact
+          iconId="discord"
+          title="!Elias#3519"
+          width="25px"
+          height="20px"
+          viewBox="0 0 25 20"
+        />
+        <Contact
+          iconId="email"
+          title="elias@elias.me"
+          width="23px"
+          height="17px"
+          viewBox="0 0 23 17"
+        />
+      </FlexWrapper>
     </StyledContactsBox>
   );
 };
 
 const StyledContactsBox = styled.div`
-    padding: 16px;
-    border: 1px solid #ABB2BF;
-`
+  padding: 16px;
+  border: 1px solid #abb2bf;
+`;
 const Title = styled.div`
-    margin-bottom: 16px;
-    font-weight: 600;
-    font-size: 16px;
-`
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.32;
+`;
