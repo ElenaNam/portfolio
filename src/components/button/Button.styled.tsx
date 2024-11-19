@@ -20,6 +20,11 @@ export const Button = styled.button<ButtonPropsType>`
   border: 1px solid;
   background-color: transparent;
 
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.32;
+  font-weight: 500;
+
   &:before {
     content: "";
     position: absolute;

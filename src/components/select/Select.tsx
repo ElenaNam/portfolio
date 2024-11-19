@@ -21,8 +21,8 @@ const StyledSelect = styled.div`
 
   &:hover {
     div {
-      height: 100%;
       opacity: 1;
+      height: auto;
     }
 
     button:after {
@@ -34,9 +34,11 @@ const StyledSelect = styled.div`
 const SelectItemsWrapper = styled.div`
   position: absolute;
   width: 100%;
-  height: 0;
   opacity: 0;
-  transition: all 0.3s ease;
+  height: 0;
+  transition: all 0.5s ease;
+  background-color: ${theme.colors.primary};
+  z-index: 99990;
 `;
 
 const SelectItems = styled.ul`

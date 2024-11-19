@@ -7,7 +7,7 @@ import { Container } from "../../../components/Container";
 
 export const Contacts = () => {
   return (
-    <StyledContacts id='contacts'>
+    <StyledContacts id="contacts">
       <Container>
         <SectionTitle hasLine>contacts</SectionTitle>
         <FlexWrapper>
@@ -22,7 +22,11 @@ export const Contacts = () => {
   );
 };
 
-const StyledContacts = styled.section``;
+const StyledContacts = styled.section`
+  h2 {
+    margin-bottom: 45px;
+  }
+`;
 
 const Text = styled.p`
   max-width: 505px;

@@ -34,7 +34,11 @@ export const Skills = () => {
   );
 };
 
-const StyledSkills = styled.section``;
+const StyledSkills = styled.section`
+  h2 {
+    margin-bottom: 12px;
+  }
+`;
 
 const Img = styled.img`
   margin: 0 32px;

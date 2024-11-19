@@ -51,6 +51,7 @@ export const GlobalStyles = createGlobalStyle`
         font-family: "Fira Code", monospace;
         background-color: ${theme.colors.primary};
         color: ${theme.colors.secondary};
+        font-size: 16px;
         line-height: 1.2;
         scroll-behavior: smooth;
     }
