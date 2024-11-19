@@ -13,7 +13,7 @@ export const Skills = () => {
         <SectionTitle hasLine widthLine="239px">
           skills
         </SectionTitle>
-        <FlexWrapper justify="space-between" gap="59px">
+        <FlexWrapper justify="space-between">
           <Img src={img} alt="" />
           <ColumnWrapper>
             <Skill title="Languages" desc="TypeScript Lua Python JavaScript" />
@@ -37,19 +37,25 @@ export const Skills = () => {
 const StyledSkills = styled.section``;
 
 const Img = styled.img`
+  margin: 0 32px;
   width: 100%;
   max-width: 349px;
   height: 282px;
 `;
 
 const ColumnWrapper = styled.div`
+  margin-top: 31px;
   column-count: 3;
-  column-gap: 16px;
+  column-gap: 0;
 
   width: 584px;
   height: 280px;
 
   & > *:first-of-type {
     height: 100%;
+  }
+  & > *:last-child,
+  & > *:nth-last-child(2) {
+    width: 196px;
   }
 `;
