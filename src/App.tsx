@@ -156,11 +156,11 @@ function App() {
         mobileList={dataSocialsForMobileMenu}
       />
       <Main />
-      <Quote />
+      {/* <Quote />
       <Projects items={dataProjects} />
       <Skills />
       <About />
-      <Contacts />
+      <Contacts /> */}
       <Footer />
     </div>
   );

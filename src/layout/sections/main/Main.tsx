@@ -5,20 +5,21 @@ import { Button } from "../../../components/button/Button.styled";
 import Img from "../../../assets/images/person-1.png";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
+import { font } from "../../../styles/Common";
 
 export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper justify="space-between">
+        <FlexWrapper justify="space-between" wrap="wrap">
           <Info>
             <FlexWrapper direction="column">
               <Title>
                 Elias is a <span>web designer</span> and{" "}
-                <span>front-end developer</span>
+                <span style={{whiteSpace: "nowrap"}}>front-end developer</span>
               </Title>
               <Description>
-                He crafts responsive websites where technologies meet creativity
+                He crafts responsive websites where technologies meet&nbsp;creativity
               </Description>
               <Button as="a" href="#contacts" colored>
                 Contact me!!
@@ -42,11 +43,16 @@ const StyledMain = styled.section`
 
 const Info = styled.div`
   padding: 74px 18px 0 0;
+  margin-bottom: 20px;
   max-width: 535px;
+
+  @media ${theme.media.tablet} {
+    padding: 0;
+  }
 `;
+
 const Title = styled.h1`
-  font-size: 32px;
-  font-weight: 600;
+  ${font({weight: 600, color: theme.colors.main, Fmax: 32, Fmin: 20})}
 
   span {
     color: ${theme.colors.accent};
@@ -54,10 +60,14 @@ const Title = styled.h1`
 `;
 
 const Description = styled.span`
+  ${font({lineHeight: 1.5, Fmax: 16, Fmin: 14})}
   display: inline-block;
   max-width: 85%;
   margin: 32px 0 24px;
-  line-height: 1.5;
+
+  @media ${theme.media.mobile} {
+    max-width: 90%;
+  }
 `;
 
 const PhotoWrapper = styled.div`
@@ -67,12 +77,18 @@ const PhotoWrapper = styled.div`
 const Photo = styled.img`
   width: 100%;
   max-width: 469px;
-  height: 100%;
-  max-height: 386px;
+  height: 386px;
   object-fit: cover;
+
+  @media ${theme.media.largeScreen} {
+    max-width: 329px;
+    height: 270px;
+  }
 `;
 
 const Note = styled.div`
+  ${font({weight: 500, Fmax: 16, Fmin: 14})}
+
   display: flex;
   align-items: center;
 
@@ -81,8 +97,6 @@ const Note = styled.div`
   padding: 7px;
 
   border: 1px solid ${theme.colors.secondary};
-  font-size: 16px;
-  font-weight: 500;
 
   &:before {
     content: "";
