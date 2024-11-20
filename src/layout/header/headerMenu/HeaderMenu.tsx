@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { Select } from "../select/Select";
-import { MenuItemInterface } from "../../App";
-import { theme } from "../../styles/Theme";
+//import { Select } from "../../../components/select/Select";
+import { MenuItemInterface } from "../../../App";
+import { theme } from "../../../styles/Theme";
 
-export const Menu = ({ items }: { items: Array<MenuItemInterface> }) => {
+export const HeaderMenu = ({ items }: { items: Array<MenuItemInterface> }) => {
   return (
     <StyledBox>
       <StyledNav>
@@ -18,7 +18,7 @@ export const Menu = ({ items }: { items: Array<MenuItemInterface> }) => {
           ))}
         </ul>
       </StyledNav>
-      <Select />
+      {/* <Select /> */}
     </StyledBox>
   );
 };
@@ -27,6 +27,12 @@ const StyledBox = styled.div`
   display: flex;
   gap: 32px;
   align-items: center;
+  visibility: visible;
+
+  @media ${theme.media.tablet} {
+    display: none;
+    visibility: hidden;
+  }
 `;
 
 const StyledNav = styled.nav`

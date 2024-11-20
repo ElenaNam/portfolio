@@ -20,4 +20,8 @@ export const Socials = ({items}: {items: Array<SocialItemInterface>}) => {
 
 const StyledSocials = styled.ul``;
 
-const SocialItem = styled.li``;
+const SocialItem = styled.li`
+  a {
+    display: flex;
+  }
+`;

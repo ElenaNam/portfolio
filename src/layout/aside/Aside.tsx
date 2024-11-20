@@ -17,8 +17,12 @@ const StyledAside = styled.aside`
   top: 0;
   padding: 0 17px 17px;
   z-index: 999999;
-
   text-align: center;
+
+  @media ${theme.media.largeScreen} {
+    display: none;
+    visibility: hidden;
+  }
 
   &:before {
     content: "";
@@ -30,7 +34,7 @@ const StyledAside = styled.aside`
   }
 
   li + li {
-    margin-top: 18px;
+    margin-top: 8px;
   }
 `;
 
