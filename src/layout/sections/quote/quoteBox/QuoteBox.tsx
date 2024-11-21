@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../../styles/Theme";
 import { FlexWrapper } from "../../../../components/FlexWrapper";
+import { font } from "../../../../styles/Common";
 
 type QuoteBoxType = {
   text: string;
@@ -21,15 +22,14 @@ export const QuoteBox = (props: QuoteBoxType) => {
 
 const StyledQuoteBox = styled.div`
   max-width: 712px;
-  color: ${theme.colors.main};
 `;
 
 const QuoteTitle = styled.div`
+  ${font({ Fmax: 24, Fmin: 20, weight: 500, color: theme.colors.main })};
+
   position: relative;
   padding: 31px;
   border: 1px solid ${theme.colors.secondary};
-  font-size: 24px;
-  font-weight: 500;
   z-index: 1;
 
   &:before,
@@ -50,12 +50,28 @@ const QuoteTitle = styled.div`
     bottom: -15px;
     right: 15px;
   }
+
+  @media ${theme.media.tablet} {
+    padding: 20px;
+
+    &:before,
+    &:after {
+      width: 30px;
+      height: 22px;
+    }
+
+    &:after {
+      bottom: -10px;
+      right: 22px;
+    }
+  }
 `;
 
 const QuoteAuthor = styled.div`
+  ${font({ Fmax: 24, Fmin: 20, color: theme.colors.main })};
+
   align-self: flex-end;
   padding: 15px;
   border: 1px solid ${theme.colors.secondary};
   border-top: none;
-  font-size: 24px;
 `;

@@ -156,8 +156,8 @@ function App() {
         mobileList={dataSocialsForMobileMenu}
       />
       <Main />
-      {/* <Quote />
-      <Projects items={dataProjects} />
+      <Quote />
+      {/* <Projects items={dataProjects} />
       <Skills />
       <About />
       <Contacts /> */}

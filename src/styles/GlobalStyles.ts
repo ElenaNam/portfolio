@@ -48,6 +48,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
+        min-width: 320px;
         font-family: "Fira Code", monospace;
         background-color: ${theme.colors.primary};
         color: ${theme.colors.secondary};
