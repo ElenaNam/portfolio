@@ -5,6 +5,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import img from "../../../assets/images/skills.png";
 import { Skill } from "./skill/Skill";
 import { Container } from "../../../components/Container";
+import { theme } from "../../../styles/Theme";
 
 export const Skills = () => {
   return (
@@ -13,8 +14,8 @@ export const Skills = () => {
         <SectionTitle hasLine widthLine="239px">
           skills
         </SectionTitle>
-        <FlexWrapper justify="space-between">
-          <Img src={img} alt="" />
+        <FlexWrapper justify="space-between" wrap="wrap">
+          <Img src={img} alt="" aria-hidden />
           <ColumnWrapper>
             <Skill title="Languages" desc="TypeScript Lua Python JavaScript" />
             <Skill title="Databases" desc="SQLite PostgreSQL Mongo" />
@@ -44,7 +45,18 @@ const Img = styled.img`
   margin: 0 32px;
   width: 100%;
   max-width: 349px;
-  height: 282px;
+  height: 283px;
+  object-fit: cover;
+
+  @media ${theme.media.largeScreen} {
+    max-width: 270px;
+    height: 219px;
+  }
+
+  @media ${theme.media.tablet} {
+    display: none;
+    visibility: hidden;
+  }
 `;
 
 const ColumnWrapper = styled.div`
@@ -55,11 +67,34 @@ const ColumnWrapper = styled.div`
   width: 584px;
   height: 280px;
 
+  & > * {
+    max-width: 178px;
+  }
+
   & > *:first-of-type {
     height: 100%;
   }
   & > *:last-child,
   & > *:nth-last-child(2) {
-    width: 196px;
+    max-width: 196px;
+  }
+
+  @media ${theme.media.tablet} {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    height: auto;
+    width: 100%;
+
+    & > *:first-of-type {
+      height: auto;
+    }
+
+    & > *,
+    & > *:last-child,
+    & > *:nth-last-child(2) {
+      max-width: 200px;
+    }
   }
 `;

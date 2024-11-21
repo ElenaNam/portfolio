@@ -158,8 +158,8 @@ function App() {
       <Main />
       <Quote />
       <Projects items={dataProjects} />
-      {/* <Skills />
-      <About />
+      <Skills />
+      {/* <About />
       <Contacts /> */}
       <Footer />
     </div>

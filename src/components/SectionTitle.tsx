@@ -8,9 +8,10 @@ type SectionTitlePropsType = {
 };
 
 export const SectionTitle = styled.h2<SectionTitlePropsType>`
-  ${font({Fmin: 28, Fmax: 32, weight: 500, lineHeight: 1.32})};
+  ${font({ Fmin: 28, Fmax: 32, weight: 500, lineHeight: 1.32 })};
 
   position: relative;
+  display: inline-block;
   margin: 0 0 47px;
 
   ${(props) =>
@@ -32,7 +33,7 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
           position: absolute;
           bottom: 0;
           left: -15px;
-          width: 100%
+          width: 100%;
         }
       }
     `}

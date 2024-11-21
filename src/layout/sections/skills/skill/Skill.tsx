@@ -20,15 +20,25 @@ export const Skill = (props: SkillPropsType) => {
 
 const StyledSkill = styled.div`
   display: inline-block;
-  width: 178px;
+  width: 100%;
 
   &:not(:last-of-type) {
     margin-bottom: 16px;
   }
+
+  @media ${theme.media.tablet} {
+    display: flex;
+
+    &:not(:last-of-type) {
+      margin-bottom: 0;
+    }
+  }
 `;
+
 const Box = styled.div`
   border: 1px solid ${theme.colors.secondary};
 `;
+
 const Title = styled.div`
   padding: 7px;
   border-bottom: 1px solid ${theme.colors.secondary};
@@ -36,6 +46,7 @@ const Title = styled.div`
   font-weight: 600;
   line-height: 1.32;
 `;
+
 const Desc = styled.div`
   padding: 7px;
   line-height: 1.57; //TODO:
