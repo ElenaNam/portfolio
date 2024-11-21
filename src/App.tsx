@@ -160,7 +160,7 @@ function App() {
       <Projects items={dataProjects} />
       <Skills />
       <About />
-      {/* <Contacts /> */}
+      <Contacts />
       <Footer />
     </div>
   );
