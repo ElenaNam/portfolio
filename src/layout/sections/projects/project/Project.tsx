@@ -4,6 +4,7 @@ import { FlexWrapper } from "../../../../components/FlexWrapper";
 import { Button } from "../../../../components/button/Button.styled";
 import { ProjectInterface } from "../../../../App";
 import { theme } from "../../../../styles/Theme";
+import { font } from "../../../../styles/Common";
 
 export const Project = (props: ProjectInterface) => {
   return (
@@ -29,14 +30,17 @@ export const Project = (props: ProjectInterface) => {
 };
 
 const StyledProject = styled.div`
-  max-width: 330px;
-  border: 1px solid #abb2bf;
+  max-width: calc((100% - 32px) / 3);
+  min-width: 272px;
+  width: 100%;
+
+  flex-shrink: 0;
+  border: 1px solid ${theme.colors.secondary};
 
   h3 {
+    ${font({ Fmin: 22, Fmax: 24, weight: 500, color: theme.colors.main })};
+
     max-width: 85%;
-    font-size: 24px;
-    font-weight: 500;
-    color: ${theme.colors.main};
   }
 
   span {
@@ -44,12 +48,16 @@ const StyledProject = styled.div`
     margin: 16px 0;
     font-size: 16px;
   }
+
+  @media ${theme.media.mobile} {
+    max-width: 330px;
+  }
 `;
 const Image = styled.img`
   width: 100%;
   height: 201px;
   object-fit: cover;
-  border-bottom: 1px solid #abb2bf;
+  border-bottom: 1px solid ${theme.colors.secondary};
 `;
 
 const Info = styled.div`
@@ -59,5 +67,5 @@ const Info = styled.div`
 const Stack = styled.div`
   padding: 0 7px;
   line-height: 37px;
-  border-bottom: 1px solid #abb2bf;
+  border-bottom: 1px solid ${theme.colors.secondary};
 `;

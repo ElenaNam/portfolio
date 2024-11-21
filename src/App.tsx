@@ -157,8 +157,8 @@ function App() {
       />
       <Main />
       <Quote />
-      {/* <Projects items={dataProjects} />
-      <Skills />
+      <Projects items={dataProjects} />
+      {/* <Skills />
       <About />
       <Contacts /> */}
       <Footer />

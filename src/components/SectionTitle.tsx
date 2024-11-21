@@ -1,30 +1,44 @@
 import styled, { css } from "styled-components";
-
+import { theme } from "../styles/Theme";
+import { font } from "../styles/Common";
 
 type SectionTitlePropsType = {
-  hasLine?: boolean
-  widthLine?: string
-}
+  hasLine?: boolean;
+  widthLine?: string;
+};
 
 export const SectionTitle = styled.h2<SectionTitlePropsType>`
-  margin: 0 0 47px;
-  font-size: 32px;
-  font-weight: 500;
+  ${font({Fmin: 28, Fmax: 32, weight: 500, lineHeight: 1.32})};
 
-  ${props => props.hasLine && css<SectionTitlePropsType>`
-    &:after {
-      content: '';
-      margin-left: 16px;
-      display: inline-block;
-      vertical-align: middle;
-      background-color: #C778DD;
-      width: ${props => props.widthLine || '127px'};
-      height: 1px;
-    }
-  `}
+  position: relative;
+  margin: 0 0 47px;
+
+  ${(props) =>
+    props.hasLine &&
+    css<SectionTitlePropsType>`
+      &:after {
+        content: "";
+        margin-left: 16px;
+        display: inline-block;
+        vertical-align: middle;
+        background-color: ${theme.colors.accent};
+        width: ${(props) => props.widthLine || "127px"};
+        height: 1px;
+
+        @media ${theme.media.mediumScreen} {
+          width: 220px;
+        }
+        @media ${theme.media.mobile} {
+          position: absolute;
+          bottom: 0;
+          left: -15px;
+          width: 100%
+        }
+      }
+    `}
 
   &:before {
     content: "#";
-    color: #c778dd;
+    color: ${theme.colors.accent};
   }
 `;
