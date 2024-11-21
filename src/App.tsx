@@ -159,8 +159,8 @@ function App() {
       <Quote />
       <Projects items={dataProjects} />
       <Skills />
-      {/* <About />
-      <Contacts /> */}
+      <About />
+      {/* <Contacts /> */}
       <Footer />
     </div>
   );

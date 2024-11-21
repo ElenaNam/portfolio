@@ -5,12 +5,13 @@ import { Button } from "../../../components/button/Button.styled";
 import img from "../../../assets/images/person-2.png";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { Container } from "../../../components/Container";
+import { theme } from "../../../styles/Theme";
 
 export const About = () => {
   return (
     <StyledAbout id="about">
       <Container>
-        <FlexWrapper justify="space-between">
+        <FlexWrapper justify="space-between" wrap="wrap">
           <div>
             <SectionTitle hasLine widthLine="326px">
               about-me
@@ -46,7 +47,7 @@ const StyledAbout = styled.section`
   position: relative;
 
   &:before {
-    content: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzgiIGhlaWdodD0iMTU1IiB2aWV3Qm94PSIwIDAgNzggMTU1IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB4PSItNzYuNSIgeT0iMC41IiB3aWR0aD0iMTU0IiBoZWlnaHQ9IjE1NCIgc3Ryb2tlPSIjQUJCMkJGIi8+Cjwvc3ZnPgo=');
+    content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzgiIGhlaWdodD0iMTU1IiB2aWV3Qm94PSIwIDAgNzggMTU1IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB4PSItNzYuNSIgeT0iMC41IiB3aWR0aD0iMTU0IiBoZWlnaHQ9IjE1NCIgc3Ryb2tlPSIjQUJCMkJGIi8+Cjwvc3ZnPgo=");
     position: absolute;
     left: 0;
     top: 35%;
@@ -62,6 +63,13 @@ const StyledAbout = styled.section`
   h2 {
     margin-bottom: 23px;
   }
+
+  @media ${theme.media.largeScreen} {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
 `;
 
 const Info = styled.div`
@@ -74,7 +82,13 @@ const Text = styled.p`
 `;
 
 const Img = styled.img`
-  width: 343px;
+  width: 100%;
+  max-width: 343px;
   height: 508px;
   object-fit: cover;
+
+  @media ${theme.media.largeScreen} {
+    max-width: 329px;
+    height: auto;
+  }
 `;
