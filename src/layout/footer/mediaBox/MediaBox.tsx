@@ -7,23 +7,23 @@ const dataSocials2 = [
   {
     id: 0,
     title: "github",
-    width: "21px",
-    height: "20px",
-    viewBox: "0 0 21 20",
+    width: "32px",
+    height: "32px",
+    viewBox: "0 0 32 32",
   },
   {
     id: 1,
     title: "figma",
-    width: "14px",
-    height: "20px",
-    viewBox: "0 0 14 20",
+    width: "32px",
+    height: "32px",
+    viewBox: "0 0 32 32",
   },
   {
     id: 2,
     title: "discord",
-    width: "25px",
-    height: "20px",
-    viewBox: "0 0 25 20",
+    width: "32px",
+    height: "32px",
+    viewBox: "0 0 32 32",
   },
 ];
 
