@@ -11,16 +11,10 @@ export const ContactsBox = () => {
         <Contact
           iconId="discord"
           title="!Elias#3519"
-          width="25px"
-          height="20px"
-          viewBox="0 0 25 20"
         />
         <Contact
           iconId="email"
           title="elias@elias.me"
-          width="23px"
-          height="17px"
-          viewBox="0 0 23 17"
         />
       </FlexWrapper>
     </StyledContactsBox>
