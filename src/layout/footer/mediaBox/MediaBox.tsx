@@ -2,36 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { Socials } from "../../../components/socials/Socials";
 import { theme } from "../../../styles/Theme";
+import { SocialItemInterface } from "../../../data/interfaces";
 
-const dataSocials2 = [
-  {
-    id: 0,
-    title: "github",
-    width: "32px",
-    height: "32px",
-    viewBox: "0 0 32 32",
-  },
-  {
-    id: 1,
-    title: "figma",
-    width: "32px",
-    height: "32px",
-    viewBox: "0 0 32 32",
-  },
-  {
-    id: 2,
-    title: "discord",
-    width: "32px",
-    height: "32px",
-    viewBox: "0 0 32 32",
-  },
-];
-
-export const MediaBox = () => {
+export const MediaBox = ({items}:{items: Array<SocialItemInterface>}) => {
   return (
     <StyledMediaBox>
       <Title>Media</Title>
-      <Socials items={dataSocials2} />
+      <Socials items={items} />
     </StyledMediaBox>
   );
 };

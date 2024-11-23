@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { FlexWrapper } from "../../../../components/FlexWrapper";
 import { Button } from "../../../../components/button/Button.styled";
-import { ProjectInterface } from "../../../../App";
+import { ProjectInterface } from "../../../../data/interfaces";
 import { theme } from "../../../../styles/Theme";
 import { font } from "../../../../styles/Common";
+
 
 export const Project = (props: ProjectInterface) => {
   return (

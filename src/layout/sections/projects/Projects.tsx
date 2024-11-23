@@ -5,7 +5,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Project } from "./project/Project";
 
 import { Container } from "../../../components/Container";
-import { ProjectInterface } from "../../../App";
+import { ProjectInterface } from "../../../data/interfaces";
 import { theme } from "../../../styles/Theme";
 
 export const Projects = ({ items }: { items: Array<ProjectInterface> }) => {

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Socials } from "../../components/socials/Socials";
 import { theme } from "../../styles/Theme";
-import { SocialItemInterface } from "../../App";
+import { SocialItemInterface } from "../../data/interfaces";
 
 export const Aside = ({list}: {list: Array<SocialItemInterface>}) => {
   return (

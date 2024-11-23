@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Icon } from "../icon/Icon";
-import { SocialItemInterface } from "../../App";
+import { SocialItemInterface } from "../../data/interfaces";
 import { theme } from "../../styles/Theme";
 
 

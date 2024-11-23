@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { MenuItemInterface, SocialItemInterface } from "../../../App";
 import { theme } from "../../../styles/Theme";
 import { Socials } from "../../../components/socials/Socials";
+import { MenuItemInterface, SocialItemInterface } from "../../../data/interfaces";
 
 export const MobileMenu = ({
   items,

@@ -5,8 +5,9 @@ import { MediaBox } from "./mediaBox/MediaBox";
 import { Logo } from "../../components/logo/Logo";
 import { Container } from "../../components/Container";
 import { theme } from "../../styles/Theme";
+import { SocialItemInterface } from "../../data/interfaces";
 
-export const Footer = () => {
+export const Footer = ({socials}:{socials: Array<SocialItemInterface>}) => {
   return (
     <StyledFooter>
       <Container>
@@ -18,7 +19,7 @@ export const Footer = () => {
             </FlexWrapper>
             <Text>Web designer and front-end developer</Text>
           </div>
-          <MediaBox />
+          <MediaBox items={socials} />
         </FlexWrapper>
         <TextBottom>© Copyright 2022. Made by Elias</TextBottom>
       </Container>

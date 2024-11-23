@@ -5,7 +5,7 @@ import { HeaderMenu } from "./headerMenu/HeaderMenu";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { theme } from "../../styles/Theme";
-import { MenuItemInterface, SocialItemInterface } from "../../App";
+import { MenuItemInterface, SocialItemInterface } from "../../data/interfaces";
 import { MobileMenu } from "./mobileMenu/MobileMenu";
 
 export const Header = ({ menu, list, mobileList }: { menu: Array<MenuItemInterface>, list: Array<SocialItemInterface>, mobileList: Array<SocialItemInterface> }) => {

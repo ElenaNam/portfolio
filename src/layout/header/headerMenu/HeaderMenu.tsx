@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 //import { Select } from "../../../components/select/Select";
-import { MenuItemInterface } from "../../../App";
+import { MenuItemInterface } from "../../../data/interfaces";
 import { theme } from "../../../styles/Theme";
 
 export const HeaderMenu = ({ items }: { items: Array<MenuItemInterface> }) => {
