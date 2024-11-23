@@ -53,4 +53,8 @@ const Title = styled.div`
   line-height: 1.3;
   font-weight: 500;
   color: ${theme.colors.main};
+
+  @media ${theme.media.mobile} {
+    display: none;
+  }
 `;

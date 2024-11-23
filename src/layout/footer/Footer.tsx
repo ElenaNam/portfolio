@@ -10,9 +10,9 @@ export const Footer = () => {
   return (
     <StyledFooter>
       <Container>
-        <FlexWrapper justify="space-between" align="flex-start">
+        <FlexWrapper justify="space-between" align="flex-start" wrap="wrap">
           <div>
-            <FlexWrapper gap="24px">
+            <FlexWrapper wrap="wrap">
               <Logo />
               <Link href="mailto:elias@elias-dev.ml">elias@elias-dev.ml</Link>
             </FlexWrapper>
@@ -30,8 +30,20 @@ const StyledFooter = styled.footer`
   margin-top: 89px;
   padding: 32px 0;
   border-top: 1px solid #abb2bf;
+
+  @media ${theme.media.mobile} {
+    margin-top: 25px;
+  }
 `;
-const Link = styled.a``;
+const Link = styled.a`
+  display: inline-block;
+  margin-left: 24px;
+
+  @media ${theme.media.mobile} {
+    margin: 12px 0 0;
+    width: 100%;
+  }
+`;
 
 const Text = styled.span`
   display: inline-block;
@@ -39,6 +51,10 @@ const Text = styled.span`
   font-size: 16px;
   line-height: 1.32;
   color: ${theme.colors.main};
+
+  @media ${theme.media.mobile} {
+    margin-bottom: 16px;
+  }
 `;
 
 const TextBottom = styled.span`
