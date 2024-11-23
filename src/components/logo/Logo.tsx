@@ -20,4 +20,8 @@ const StyledLogo = styled.a`
   font-weight: 700;
   font-size: 16px;
   color: ${theme.colors.main};
+
+  &:hover {
+    color: ${theme.colors.accent};
+  }
 `;

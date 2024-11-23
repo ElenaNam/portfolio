@@ -36,6 +36,7 @@ const StyledProject = styled.div`
 
   flex-shrink: 0;
   border: 1px solid ${theme.colors.secondary};
+  transition: .3s;
 
   h3 {
     ${font({ Fmin: 22, Fmax: 24, weight: 500, color: theme.colors.main })};
@@ -47,6 +48,11 @@ const StyledProject = styled.div`
     display: inline-block;
     margin: 16px 0;
     font-size: 16px;
+  }
+
+  &:hover { 
+    box-shadow: 3px 3px 8px -4px  ${theme.colors.add};
+    background-color: #7a797718;;
   }
 
   @media ${theme.media.mobile} {

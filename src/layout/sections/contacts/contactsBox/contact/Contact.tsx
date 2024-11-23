@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Icon } from '../../../../../components/icon/Icon';
+import { theme } from '../../../../../styles/Theme';
 
 type ContactPropsType = {
     iconId: string
@@ -29,5 +30,9 @@ const StyledContact = styled.a`
 
     span {
       line-height: 2;
+    }
+
+    &:hover {
+      color: ${theme.colors.main};
     }
 `

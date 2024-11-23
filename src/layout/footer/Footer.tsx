@@ -29,7 +29,7 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
   margin-top: 89px;
   padding: 32px 0;
-  border-top: 1px solid #abb2bf;
+  border-top: 1px solid ${theme.colors.secondary};
 
   @media ${theme.media.mobile} {
     margin-top: 25px;
@@ -38,6 +38,10 @@ const StyledFooter = styled.footer`
 const Link = styled.a`
   display: inline-block;
   margin-left: 24px;
+
+  &:hover {
+    color: ${theme.colors.main};
+  }
 
   @media ${theme.media.mobile} {
     margin: 12px 0 0;

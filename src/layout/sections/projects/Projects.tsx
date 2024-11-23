@@ -48,8 +48,13 @@ const StyledProjects = styled.section`
 
 const StyledLink = styled.a`
   line-height: 2.8;
+
   &:after {
     content: "~~>";
     margin-left: 10px;
+  }
+
+  &:hover {
+    color: ${theme.colors.main};
   }
 `;

@@ -86,6 +86,7 @@ const Img = styled.img`
   max-width: 343px;
   height: 508px;
   object-fit: cover;
+  cursor: default;
 
   @media ${theme.media.largeScreen} {
     max-width: 329px;

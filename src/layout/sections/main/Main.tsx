@@ -79,6 +79,7 @@ const Photo = styled.img`
   max-width: 469px;
   height: 386px;
   object-fit: cover;
+  cursor: default;
 
   @media ${theme.media.largeScreen} {
     max-width: 329px;
