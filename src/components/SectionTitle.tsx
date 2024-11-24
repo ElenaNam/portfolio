@@ -13,6 +13,7 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
   position: relative;
   display: inline-block;
   margin: 0 0 47px;
+  color: ${theme.colors.main};
 
   ${(props) =>
     props.hasLine &&

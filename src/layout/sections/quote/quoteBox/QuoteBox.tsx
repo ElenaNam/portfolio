@@ -71,7 +71,7 @@ const QuoteAuthor = styled.div`
   ${font({ Fmax: 24, Fmin: 20, color: theme.colors.main })};
 
   align-self: flex-end;
-  padding: 15px;
+  padding: 20px 15px 15px;
   border: 1px solid ${theme.colors.secondary};
   border-top: none;
 `;

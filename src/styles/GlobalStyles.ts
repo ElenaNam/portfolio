@@ -1,8 +1,8 @@
 import { createGlobalStyle } from "styled-components";
-import FiraCodeRegular from "../assets/fonts/FiraCode-Regular.ttf";
-import FiraCodeMedium from "../assets/fonts/FiraCode-Medium.ttf";
-import FiraCodeSemiBold from "../assets/fonts/FiraCode-SemiBold.ttf";
-import FiraCodeBold from "../assets/fonts/FiraCode-Bold.ttf";
+import FiraCodeRegular from "../assets/fonts/FiraCode-Regular.woff";
+import FiraCodeMedium from "../assets/fonts/FiraCode-Medium.woff";
+import FiraCodeSemiBold from "../assets/fonts/FiraCode-SemiBold.woff";
+import FiraCodeBold from "../assets/fonts/FiraCode-Bold.woff";
 import { theme } from "./Theme";
 
 export const GlobalStyles = createGlobalStyle`
@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: 400;
         font-style: normal;
         font-display: swap;
-        src: url(${FiraCodeRegular}) format('ttf')
+        src: url(${FiraCodeRegular}) format('woff')
     }
 
     @font-face {
@@ -20,7 +20,7 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: 500;
         font-style: normal;
         font-display: swap;
-        src: url(${FiraCodeMedium}) format('ttf')
+        src: url(${FiraCodeMedium}) format('woff')
     }
 
     @font-face {
@@ -28,7 +28,7 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: 600;
         font-style: normal;
         font-display: swap;
-        src: url(${FiraCodeSemiBold}) format('ttf')
+        src: url(${FiraCodeSemiBold}) format('woff')
     }
 
     @font-face {
@@ -36,7 +36,7 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: 700;
         font-style: normal;
         font-display: swap;
-        src: url(${FiraCodeBold}) format('ttf')
+        src: url(${FiraCodeBold}) format('woff')
     }
 
     *, 

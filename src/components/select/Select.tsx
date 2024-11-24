@@ -65,6 +65,8 @@ const SelectButton = styled.button`
   background-color: transparent;
   border: 0;
   font-weight: 600;
+  font-size: 16px;
+  line-height: 1.32;
 
   &:after {
     content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNyIgdmlld0JveD0iMCAwIDEwIDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxsaW5lIHgxPSIwLjcwNzEwNyIgeTE9IjEuMjkyODkiIHgyPSI1LjcwNzExIiB5Mj0iNi4yOTI4OSIgc3Ryb2tlPSIjQUJCMkJGIiBzdHJva2Utd2lkdGg9IjIiLz4KPGxpbmUgeDE9IjQuMjkyODkiIHkxPSI2LjI5Mjg5IiB4Mj0iOS4yOTI4OSIgeTI9IjEuMjkyODkiIHN0cm9rZT0iI0FCQjJCRiIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPgo=");

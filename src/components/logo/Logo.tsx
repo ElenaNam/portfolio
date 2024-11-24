@@ -19,6 +19,7 @@ const StyledLogo = styled.a`
 
   font-weight: 700;
   font-size: 16px;
+  line-height: 1.32;
   color: ${theme.colors.main};
 
   &:hover {

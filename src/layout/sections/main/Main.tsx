@@ -37,8 +37,7 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  //min-height: 100vh;
-  padding-top: 112px;
+  padding-top: 125px;
 `;
 
 const Info = styled.div`

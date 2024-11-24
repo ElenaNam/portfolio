@@ -12,7 +12,7 @@ export const Skill = (props: SkillPropsType) => {
     <StyledSkill>
       <Box>
         <Title>{props.title}</Title>
-        <Desc>{props.desc}</Desc>
+        <Desc><span>{props.desc}</span></Desc>
       </Box>
     </StyledSkill>
   );
@@ -48,6 +48,7 @@ const Title = styled.div`
 `;
 
 const Desc = styled.div`
-  padding: 7px;
-  line-height: 1.57; //TODO:
+  padding: 7px 7px 2px;
+  line-height: 1.75;
+  letter-spacing: -.3px;
 `;

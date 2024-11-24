@@ -37,7 +37,7 @@ export const Skills = () => {
 
 const StyledSkills = styled.section`
   h2 {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 `;
 
@@ -65,7 +65,7 @@ const ColumnWrapper = styled.div`
   column-gap: 0;
 
   width: 584px;
-  height: 280px;
+  min-height: 280px;
 
   & > * {
     max-width: 178px;
@@ -83,7 +83,8 @@ const ColumnWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
-
+    
+    min-height: 1px;
     height: auto;
     width: 100%;
 

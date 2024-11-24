@@ -73,6 +73,6 @@ const Info = styled.div`
 
 const Stack = styled.div`
   padding: 0 7px;
-  line-height: 37px;
+  line-height: 35px;
   border-bottom: 1px solid ${theme.colors.secondary};
 `;

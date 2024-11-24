@@ -27,7 +27,7 @@ const StyledAside = styled.aside`
   &:before {
     content: "";
     display: inline-block;
-    margin-bottom: 14px;
+    margin-bottom: 8px;
     width: 1px;
     height: 191px;
     background-color: ${theme.colors.secondary};
