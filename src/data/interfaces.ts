@@ -23,10 +23,17 @@ export interface ProjectInterface {
     isCached?: boolean
 }
 
+export interface SkillsInterface {
+    id?: number
+    title: string
+    desc: string
+}
+
 export interface initialStateInterface {
     socials: SocialItemInterface[]
     socialsForMobileMenu: SocialItemInterface[]
     socialsForFooter: SocialItemInterface[]
     menuItems: MenuItemInterface[]
     projects: ProjectInterface[]
+    skills: SkillsInterface[]
 }

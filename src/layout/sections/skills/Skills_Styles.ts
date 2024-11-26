@@ -84,6 +84,7 @@ const Skill = styled.div`
 `;
 
 const Box = styled.div`
+  width: 100%;
   border: 1px solid ${theme.colors.secondary};
 `;
 

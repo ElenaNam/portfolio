@@ -17,6 +17,7 @@ function App() {
     socialsForFooter,
     menuItems,
     projects,
+    skills
   } = initialState;
 
   return (
@@ -26,7 +27,7 @@ function App() {
       <Main />
       <Quote />
       <Projects items={projects} />
-      <Skills />
+      <Skills items={skills} />
       <About />
       <Contacts />
       <Footer socials={socialsForFooter} />

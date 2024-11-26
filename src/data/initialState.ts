@@ -86,7 +86,7 @@ export const initialState: initialStateInterface = {
     {
       id: 0,
       title: "home",
-      link: "/",
+      link: "./",
     },
     {
       id: 1,
@@ -142,4 +142,32 @@ export const initialState: initialStateInterface = {
       isCached: false,
     },
   ],
+  skills: [
+    {
+      id: 0,
+      title: "Languages",
+      desc: "JavaScript PHP TypeScript"
+    },
+    {
+      id: 1,
+      title: "Basics",
+      desc: "HTML CSS Figma Git"
+    },
+    
+    {
+      id: 2,
+      title: "Other",
+      desc: "CMS Wordpress Jira"
+    },
+    {
+      id: 3,
+      title: "Tools",
+      desc: "VSCode Webpack Vite Photoshop SCSS Pug Stylus Jest"
+    },    
+    {
+      id: 4,
+      title: "Libraries",
+      desc: "React Next.js jQuery Bootstrap Tailwind"
+    },
+  ]
 };

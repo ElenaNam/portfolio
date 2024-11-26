@@ -13,10 +13,10 @@ export const MobileMenu: React.FC<{
 }> = ({ items, list }) => {
   return (
     <S.MobileNav>
-      <S.BurgerButton isOpen={true}>
+      <S.BurgerButton isOpen={false}>
         <span></span>
       </S.BurgerButton>
-      <S.MobileMenuPopup isOpen={true}>
+      <S.MobileMenuPopup isOpen={false}>
         <Menu items={items} />
         <Socials items={list} />
       </S.MobileMenuPopup>
