@@ -11,6 +11,7 @@ export const initialState: initialStateInterface = {
       width: "32px",
       height: "32px",
       viewBox: "0 0 32 32",
+      link: "https://github.com/ElenaNam"
     },
     {
       id: 1,
@@ -18,6 +19,7 @@ export const initialState: initialStateInterface = {
       width: "32px",
       height: "32px",
       viewBox: "0 0 32 32",
+      link: ""
     },
     {
       id: 2,
@@ -25,6 +27,7 @@ export const initialState: initialStateInterface = {
       width: "32px",
       height: "32px",
       viewBox: "0 0 32 32",
+      link: ""
     },
   ],
   socialsForMobileMenu: [
@@ -34,6 +37,7 @@ export const initialState: initialStateInterface = {
       width: "64px",
       height: "64px",
       viewBox: "0 0 64 64",
+      link: "https://github.com/ElenaNam"
     },
     {
       id: 1,
@@ -41,6 +45,7 @@ export const initialState: initialStateInterface = {
       width: "64px",
       height: "64px",
       viewBox: "0 0 64 64",
+      link: ""
     },
     {
       id: 2,
@@ -48,6 +53,7 @@ export const initialState: initialStateInterface = {
       width: "64px",
       height: "64px",
       viewBox: "0 0 64 64",
+      link: ""
     },
   ],
   socialsForFooter: [
@@ -57,6 +63,7 @@ export const initialState: initialStateInterface = {
       width: "32px",
       height: "32px",
       viewBox: "0 0 32 32",
+      link: "https://github.com/ElenaNam"
     },
     {
       id: 1,
@@ -64,6 +71,7 @@ export const initialState: initialStateInterface = {
       width: "32px",
       height: "32px",
       viewBox: "0 0 32 32",
+      link: ""
     },
     {
       id: 2,
@@ -71,6 +79,7 @@ export const initialState: initialStateInterface = {
       width: "32px",
       height: "32px",
       viewBox: "0 0 32 32",
+      link: "https://discordapp.com/users/751424966574211082/"
     },
   ],
   menuItems: [

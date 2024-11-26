@@ -6,7 +6,7 @@ import { Skill } from "./skill/Skill";
 import { Container } from "../../../components/Container";
 import { S } from "./Skills_Styles"
 
-export const Skills = () => {
+export const Skills: React.FC = () => {
   return (
     <S.Skills>
       <Container>

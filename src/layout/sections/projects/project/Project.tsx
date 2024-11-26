@@ -1,11 +1,11 @@
 import React from "react";
 import { FlexWrapper } from "../../../../components/FlexWrapper";
-import { Button } from "../../../../components/button/Button.styled";
+import { Button } from "../../../../components/button/Button";
 import { ProjectInterface } from "../../../../data/interfaces";
 import { S } from "../Projects_Styles"
 import { theme } from "../../../../styles/Theme";
 
-export const Project = (props: ProjectInterface) => {
+export const Project: React.FC<ProjectInterface> = (props) => {
   return (
     <S.Project>
       <S.Image src={props.imgSrc} alt={props.title} />

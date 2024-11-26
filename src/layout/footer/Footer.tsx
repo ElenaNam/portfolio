@@ -7,7 +7,7 @@ import { Container } from "../../components/Container";
 import { SocialItemInterface } from "../../data/interfaces";
 import { S } from "./Footer_Styles"
 
-export const Footer = ({socials}:{socials: Array<SocialItemInterface>}) => {
+export const Footer: React.FC<{socials: Array<SocialItemInterface>}> = ({socials}) => {
   return (
     <S.Footer>
       <Container>
@@ -15,13 +15,13 @@ export const Footer = ({socials}:{socials: Array<SocialItemInterface>}) => {
           <div>
             <FlexWrapper wrap="wrap">
               <Logo />
-              <S.Link href="mailto:elias@elias-dev.ml">elias@elias-dev.ml</S.Link>
+              <S.Link href="mailto:el-ki-ri@yandex.ru">el-ki-ri@yandex.ru</S.Link>
             </FlexWrapper>
-            <S.Text>Web designer and front-end developer</S.Text>
+            <S.Text>Front-end developer</S.Text>
           </div>
           <MediaBox items={socials} />
         </FlexWrapper>
-        <S.TextBottom>© Copyright 2022. Made by Elias</S.TextBottom>
+        <S.TextBottom>© Copyright 2024. Made by El_Ki</S.TextBottom>
       </Container>
     </S.Footer>
   );

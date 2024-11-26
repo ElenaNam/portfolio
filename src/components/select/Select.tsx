@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../styles/Theme";
 
-export const Select = () => {
+export const Select: React.FC = () => {
   return (
     <StyledSelect>
       <SelectButton aria-label="Выбрать язык">EN</SelectButton>

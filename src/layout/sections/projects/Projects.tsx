@@ -8,7 +8,7 @@ import { ProjectInterface } from "../../../data/interfaces";
 import { S } from "./Projects_Styles"
 
 
-export const Projects = ({ items }: { items: Array<ProjectInterface> }) => {
+export const Projects: React.FC<{ items: Array<ProjectInterface> }> = ({ items }) => {
   return (
     <S.Projects id="works">
       <Container>

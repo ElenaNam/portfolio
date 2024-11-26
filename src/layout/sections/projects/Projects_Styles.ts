@@ -46,6 +46,7 @@ const Project = styled.div`
   }
 
   &:hover { 
+    transform: translateY(-2px);
     box-shadow: 3px 3px 8px -4px  ${theme.colors.add};
     background-color: #7a797718;;
   }

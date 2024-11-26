@@ -7,7 +7,7 @@ type QuoteBoxType = {
   author: string;
 };
 
-export const QuoteBox = (props: QuoteBoxType) => {
+export const QuoteBox: React.FC<QuoteBoxType> = (props) => {
   return (
     <S.QuoteBox>
       <FlexWrapper direction="column">

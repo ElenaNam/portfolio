@@ -3,18 +3,20 @@ import { Contact } from "./contact/Contact";
 import { FlexWrapper } from "../../../../components/FlexWrapper";
 import { S } from "../Contacts_Styles"
 
-export const ContactsBox = () => {
+export const ContactsBox: React.FC = () => {
   return (
     <S.ContactsBox>
       <S.Title>Message me here</S.Title>
       <FlexWrapper direction="column" gap="8px">
         <Contact
-          iconId="discord"
-          title="!Elias#3519"
+          iconId="tg"
+          title="@el_kiri"
+          link="https://t.me/el_kiri"
         />
         <Contact
           iconId="email"
-          title="elias@elias.me"
+          title="el-ki-ri@yandex.ru"
+          link="mailto:el-ki-ri@yandex.ru"
         />
       </FlexWrapper>
     </S.ContactsBox>

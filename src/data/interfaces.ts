@@ -4,6 +4,7 @@ export interface SocialItemInterface {
     width: string
     height: string
     viewBox: string
+    link?: string
 }
 
 export interface MenuItemInterface {

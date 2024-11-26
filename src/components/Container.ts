@@ -16,6 +16,3 @@ export const Container = styled.div`
         padding: 0 16px;
     }
 `
-
-// 1025 + 60 + 60
-//

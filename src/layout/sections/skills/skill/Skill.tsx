@@ -6,7 +6,7 @@ type SkillPropsType = {
   desc: string;
 };
 
-export const Skill = (props: SkillPropsType) => {
+export const Skill: React.FC<SkillPropsType> = (props) => {
   return (
     <S.Skill>
       <S.Box>

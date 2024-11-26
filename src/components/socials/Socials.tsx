@@ -4,10 +4,10 @@ import { SocialItemInterface } from "../../data/interfaces";
 import { theme } from "../../styles/Theme";
 
 
-export const Socials = ({items}: {items: Array<SocialItemInterface>}) => {
+export const Socials: React.FC<{items: Array<SocialItemInterface>}> = ({items}) => {
   return (
     <StyledSocials>
-        {items.map((item => <SocialItem><a href="/">
+        {items.map((item => <SocialItem><a href={item.link} target="_blank" rel="noreferrer">
             <Icon
               iconId={item.title}
               width={item.width}
