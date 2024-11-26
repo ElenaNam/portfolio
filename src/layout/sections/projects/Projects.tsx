@@ -1,22 +1,22 @@
 import React from "react";
-import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Project } from "./project/Project";
 
 import { Container } from "../../../components/Container";
 import { ProjectInterface } from "../../../data/interfaces";
-import { theme } from "../../../styles/Theme";
+import { S } from "./Projects_Styles"
+
 
 export const Projects = ({ items }: { items: Array<ProjectInterface> }) => {
   return (
-    <StyledProjects id="works">
+    <S.Projects id="works">
       <Container>
         <FlexWrapper justify="space-between">
           <SectionTitle hasLine widthLine="511px">
             projects
           </SectionTitle>
-          <StyledLink href="">View all</StyledLink>
+          <S.Link href="">View all</S.Link>
         </FlexWrapper>
 
         <FlexWrapper wrap="wrap" gap="16px" align="flex-start">
@@ -33,28 +33,6 @@ export const Projects = ({ items }: { items: Array<ProjectInterface> }) => {
           ))}
         </FlexWrapper>
       </Container>
-    </StyledProjects>
+    </S.Projects>
   );
 };
-
-const StyledProjects = styled.section`
-  background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjgiIGhlaWdodD0iMTU1IiB2aWV3Qm94PSIwIDAgNjggMTU1IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB4PSIwLjUiIHk9IjAuNSIgd2lkdGg9IjE1NCIgaGVpZ2h0PSIxNTQiIHN0cm9rZT0iI0FCQjJCRiIvPgo8L3N2Zz4K")
-    no-repeat right center;
-
-  @media ${theme.media.largeScreen} {
-    background: none;
-  }
-`;
-
-const StyledLink = styled.a`
-  line-height: 2.8;
-
-  &:after {
-    content: "~~>";
-    margin-left: 10px;
-  }
-
-  &:hover {
-    color: ${theme.colors.main};
-  }
-`;
