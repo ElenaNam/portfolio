@@ -5,7 +5,7 @@ import { theme } from "../../styles/Theme";
 
 export const Logo: React.FC = () => {
   return (
-    <StyledLogo href="/">
+    <StyledLogo href="./">
       <Icon iconId="logo" width="16" height="17" viewBox="0 0 53 53" />
       <span>El_Ki</span>
     </StyledLogo>
