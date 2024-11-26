@@ -18,7 +18,10 @@ export const Header: React.FC<{
   menu: Array<MenuItemInterface>;
   mobileList: Array<SocialItemInterface>;
 }) => {
+
   const [width, SetWidth] = React.useState(window.innerWidth);
+  const [scrolled, setScrolled] = React.useState(false);
+
   const breakpoint = 768;
 
   React.useEffect(() => {
@@ -28,8 +31,19 @@ export const Header: React.FC<{
     return () => window.removeEventListener("resize", handleWindowResize);
   }, []);
 
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <S.Header>
+    <S.Header scrolled={scrolled}>
       <Container>
         <FlexWrapper justify="space-between" align="center">
           <Logo />

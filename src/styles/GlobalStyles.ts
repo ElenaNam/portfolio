@@ -47,6 +47,10 @@ export const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    html, body {
+        scroll-behavior: smooth;
+    }
+
     body {
         min-width: 320px;
         font-family: "Fira Code", monospace;
@@ -54,7 +58,6 @@ export const GlobalStyles = createGlobalStyle`
         color: ${theme.colors.secondary};
         font-size: 16px;
         line-height: 1.2;
-        scroll-behavior: smooth;
     }
 
     ul {

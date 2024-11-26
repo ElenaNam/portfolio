@@ -11,14 +11,20 @@ export const MobileMenu: React.FC<{
   items: Array<MenuItemInterface>;
   list: Array<SocialItemInterface>;
 }> = ({ items, list }) => {
+  const [isOpen, setOpen] = React.useState(false);
+
+  const handleClick = () => {
+    setOpen(!isOpen);
+  }
+
   return (
     <S.MobileNav>
-      <S.BurgerButton isOpen={false}>
+      <S.BurgerButton onClick={handleClick} isOpen={isOpen}>
         <span></span>
       </S.BurgerButton>
-      <S.MobileMenuPopup isOpen={false}>
-        <Menu items={items} />
-        <Socials items={list} />
+      <S.MobileMenuPopup isOpen={isOpen}>
+        <Menu items={items} onClick={() => setOpen(false)} />
+        <Socials items={list} onClick={() => setOpen(false)} />
       </S.MobileMenuPopup>
     </S.MobileNav>
   );
