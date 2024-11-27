@@ -24,9 +24,8 @@ const Title = styled.h1`
   }
 `;
 
-const Description = styled.span`
+const Description = styled.p`
   ${font({lineHeight: 1.5, Fmax: 16, Fmin: 14})}
-  display: inline-block;
   max-width: 85%;
   margin: 32px 0 24px;
 
