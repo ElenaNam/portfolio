@@ -7,6 +7,40 @@ import { Container } from "../../../components/Container";
 import { ProjectInterface } from "../../../data/interfaces";
 import { S } from "./Projects_Styles"
 
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
+
+
+const responsive = {
+  0: { items: 1 },
+  568: { items: 2 },
+  1024: { items: 3 },
+};
+
+
+const Carousel: React.FC<{ items: Array<ProjectInterface> }> = ({ items }) => {
+  const carouselItems = items.map((item) => (
+    <div key={item.id} className="carousel-item">
+      <Project
+        imgSrc={item.imgSrc}
+        title={item.title}
+        desc={item.desc}
+        stack={item.stack}
+        link={item.link}
+        isCached={item.id === 0 && true}
+      />
+    </div>
+  ));
+
+  return (
+    <AliceCarousel
+      mouseTracking
+      items={carouselItems}
+      responsive={responsive}
+      controlsStrategy="alternate"
+    />
+  );
+};
 
 export const Projects: React.FC<{ items: Array<ProjectInterface> }> = ({ items }) => {
   return (
@@ -18,8 +52,8 @@ export const Projects: React.FC<{ items: Array<ProjectInterface> }> = ({ items }
           </SectionTitle>
           <S.Link href="">View all</S.Link>
         </FlexWrapper>
-
-        <FlexWrapper wrap="wrap" gap="16px" align="flex-start">
+        < Carousel items={items} />
+        {/* <FlexWrapper wrap="wrap" gap="16px" align="flex-start">
           {items.map((item) => (
             <Project
               key={item.id}
@@ -31,7 +65,7 @@ export const Projects: React.FC<{ items: Array<ProjectInterface> }> = ({ items }
               isCached={item.id === 0 && true}
             />
           ))}
-        </FlexWrapper>
+        </FlexWrapper> */}
       </Container>
     </S.Projects>
   );
