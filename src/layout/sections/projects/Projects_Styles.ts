@@ -25,8 +25,8 @@ const Link = styled.a`
 `;
 
 const Project = styled.div`
-  max-width: calc((100% - 32px) / 3);
-  min-width: 272px;
+  /* max-width: calc((100% - 32px) / 3);
+  min-width: 272px; */
   width: 100%;
 
   flex-shrink: 0;
@@ -46,7 +46,7 @@ const Project = styled.div`
   }
 
   &:hover { 
-    transform: translateY(-2px);
+    //transform: translateY(-2px);
     box-shadow: 3px 3px 8px -4px  ${theme.colors.add};
     background-color: #7a797718;;
   }

@@ -81,4 +81,15 @@ export const GlobalStyles = createGlobalStyle`
     section {
         padding: 56px 0;
     }
+
+    .alice-carousel__stage {
+        margin: 0 -8px; 
+    }
+
+    .alice-carousel__stage-item {
+        max-width: calc(((100% - 32px) / 3) + 16px);
+        min-width: 272px;
+        width: 100%;
+        padding: 0 8px;
+    }
 `;

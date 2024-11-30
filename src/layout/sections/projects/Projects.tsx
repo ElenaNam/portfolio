@@ -19,8 +19,8 @@ const responsive = {
 
 
 const Carousel: React.FC<{ items: Array<ProjectInterface> }> = ({ items }) => {
-  const carouselItems = items.map((item) => (
-    <div key={item.id} className="carousel-item">
+  const carouselItems = items.map((item, i) => (
+    <div key={item.id} className="carousel-item item" data-value={i + 1}>
       <Project
         imgSrc={item.imgSrc}
         title={item.title}
@@ -35,9 +35,10 @@ const Carousel: React.FC<{ items: Array<ProjectInterface> }> = ({ items }) => {
   return (
     <AliceCarousel
       mouseTracking
+      disableDotsControls
+      disableButtonsControls
       items={carouselItems}
       responsive={responsive}
-      controlsStrategy="alternate"
     />
   );
 };
@@ -50,7 +51,6 @@ export const Projects: React.FC<{ items: Array<ProjectInterface> }> = ({ items }
           <SectionTitle hasLine widthLine="511px">
             projects
           </SectionTitle>
-          <S.Link href="">View all</S.Link>
         </FlexWrapper>
         < Carousel items={items} />
         {/* <FlexWrapper wrap="wrap" gap="16px" align="flex-start">

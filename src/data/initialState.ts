@@ -141,6 +141,24 @@ export const initialState: initialStateInterface = {
       imgSrc: ImgProject3,
       isCached: false,
     },
+    {
+      id: 3,
+      title: "Project 4",
+      desc: "Get answers to your kahoot quiz",
+      stack: ["CSS", "Express", "Node.js", "Flask"],
+      link: "",
+      imgSrc: ImgProject3,
+      isCached: false,
+    },
+    {
+      id: 4,
+      title: "Project 5",
+      desc: "Get answers to your kahoot quiz",
+      stack: ["CSS", "Express", "Node.js", "Flask"],
+      link: "",
+      imgSrc: ImgProject3,
+      isCached: false,
+    },
   ],
   skills: [
     {
