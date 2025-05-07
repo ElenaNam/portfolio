@@ -1,7 +1,7 @@
 import React from "react";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Button } from "../../../components/button/Button";
-import Img from "../../../assets/images/person-1.png";
+import MainImg from "../../../assets/images/main-photo.jpg";
 import { Container } from "../../../components/Container";
 import { S } from "./Main_Styles"
 
@@ -26,8 +26,9 @@ export const Main: React.FC = () => {
             </FlexWrapper>
           </S.Info>
           <S.PhotoWrapper>
-            <S.Photo src={Img} alt="" />
-            <S.Note>Currently working on&nbsp;<span>Portfolio</span></S.Note>
+            {/* <S.Photo src={Img} alt="" /> */}
+            <S.Photo src={MainImg} alt="Elena Kirillova" />
+            <S.Note>Currently working on&nbsp;<a href="https://filipp-ok.ru/" target="_blank">Filippok</a></S.Note>
           </S.PhotoWrapper>
         </FlexWrapper>
       </Container>

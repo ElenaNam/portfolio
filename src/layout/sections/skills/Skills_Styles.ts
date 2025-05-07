@@ -31,7 +31,7 @@ const ColumnWrapper = styled.div`
   column-gap: 0;
 
   width: 584px;
-  min-height: 280px;
+  min-height: 419px;
 
   & > * {
     max-width: 178px;

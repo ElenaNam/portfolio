@@ -1,7 +1,7 @@
 import React from "react";
 import { QuoteBox } from "./quoteBox/QuoteBox";
-import { Container } from "../../../components/Container";
-import { FlexWrapper } from "../../../components/FlexWrapper";
+import { Container } from "@components/Container";
+import { FlexWrapper } from "@components/FlexWrapper";
 import { S } from "./Quote_Styles"
 
 export const Quote: React.FC = () => {

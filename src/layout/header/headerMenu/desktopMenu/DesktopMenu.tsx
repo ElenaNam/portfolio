@@ -1,7 +1,7 @@
 import React from "react";
 
 //import { Select } from "../../../components/select/Select";
-import { MenuItemInterface } from "../../../../data/interfaces";
+import { MenuItemInterface } from "@data/types";
 import { Menu } from "../menu/Menu";
 import { S } from "../HeaderMenu_Styles";
 

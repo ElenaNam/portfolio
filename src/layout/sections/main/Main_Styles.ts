@@ -72,7 +72,7 @@ const Note = styled.div`
     background-color: ${theme.colors.accent}
   }
 
-  span {
+  a {
     color: ${theme.colors.main};
     font-weight: 600;
   }

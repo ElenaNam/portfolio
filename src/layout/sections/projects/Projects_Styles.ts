@@ -55,6 +55,26 @@ const Project = styled.div`
     max-width: 330px;
   }
 `;
+
+const ProjectsSection = styled.section`
+  margin: 45px auto 15px;
+  padding: 0;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+`;
+const ProjectsSectionTitle = styled.h3`
+  ${font({ Fmin: 24, Fmax: 28, weight: 500, lineHeight: 1.32 })};
+
+  display: inline-block;
+  margin: 0 auto 15px;
+  color: ${theme.colors.main};
+  text-transform: lowercase;
+  text-align: center;
+
+`;
+
 const Image = styled.img`
   width: 100%;
   height: 201px;
@@ -72,12 +92,20 @@ const Stack = styled.div`
   border-bottom: 1px solid ${theme.colors.secondary};
 `;
 
+const Task = styled.div`
+  display: inline-block;
+  color: ${theme.colors.accent}
+`;
+
 export const S = {
     Projects,
+    ProjectsSection,
+    ProjectsSectionTitle,
     Link,
     Project,
     Image,
     Info,
-    Stack
+    Stack,
+    Task
 }
 

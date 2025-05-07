@@ -1,6 +1,6 @@
 import React from "react";
 import { Contact } from "./contact/Contact";
-import { FlexWrapper } from "../../../../components/FlexWrapper";
+import { FlexWrapper } from "@components/FlexWrapper";
 import { S } from "../Contacts_Styles"
 
 export const ContactsBox: React.FC = () => {

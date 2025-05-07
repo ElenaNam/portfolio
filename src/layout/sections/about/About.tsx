@@ -1,11 +1,11 @@
 import React from "react";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import { Button } from "../../../components/button/Button";
+import { FlexWrapper } from "@components/FlexWrapper";
+//import { Button } from "@components/button/Button";
 import img from "../../../assets/images/person-2.png";
-import { SectionTitle } from "../../../components/SectionTitle";
-import { Container } from "../../../components/Container";
+import { SectionTitle } from "@components/SectionTitle";
+import { Container } from "@components/Container";
 import { S } from "./About_Styles"
-import { theme } from "../../../styles/Theme";
+//import { theme } from "@styles/Theme";
 
 export const About: React.FC = () => {
   return (
@@ -29,9 +29,9 @@ export const About: React.FC = () => {
                 clients to establish their presence online. I&nbsp;always strive to
                 learn about the newest technologies and&nbsp;frameworks.
               </S.Text>
-              <Button bgColor={theme.colors.accent} colored>
+              {/* <Button bgColor={theme.colors.accent} colored>
                 Read more
-              </Button>
+              </Button> */}
             </S.Info>
           </div>
 

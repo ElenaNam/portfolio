@@ -1,15 +1,18 @@
 import React from "react";
-import { FlexWrapper } from "../../../../components/FlexWrapper";
-import { Button } from "../../../../components/button/Button";
-import { ProjectInterface } from "../../../../data/interfaces";
-import { S } from "../Projects_Styles"
-import { theme } from "../../../../styles/Theme";
+import { FlexWrapper } from "@components/FlexWrapper";
+import { Button } from "@components/button/Button";
+import { ProjectInterface } from "@data/types";
+import { S } from "../Projects_Styles";
+import { theme } from "@styles/Theme";
+
 
 export const Project: React.FC<ProjectInterface> = (props) => {
   return (
     <S.Project>
       <S.Image src={props.imgSrc} alt={props.title} />
-      <S.Stack>{props.stack.map((item) => `${item} `)}</S.Stack>
+      <S.Stack>
+        {props.stack.map((item) => `${item} `)} <S.Task>{props.task}</S.Task>
+      </S.Stack>
       <S.Info>
         <h3>{props.title}</h3>
         <span>{props.desc}</span>
