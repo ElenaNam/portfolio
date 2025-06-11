@@ -13,8 +13,9 @@ export const Contacts: React.FC = () => {
         <FlexWrapper justify="space-between" wrap="wrap" gap="16px">
           <S.Text>
             Open to work opportunities with: TypeScript, React, Redux, Redux
-            Toolkit, and&nbsp;RTK Query. If you have a&nbsp;relevant project or
-            questions—let’s discuss!
+            Toolkit, Next.js, and&nbsp;RTK Query.
+            <br />
+            If you have a&nbsp;relevant project or questions—let’s discuss!
           </S.Text>
           <ContactsBox />
         </FlexWrapper>

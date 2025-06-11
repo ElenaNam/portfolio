@@ -31,7 +31,7 @@ const ColumnWrapper = styled.div`
   column-gap: 0;
 
   width: 584px;
-  min-height: 419px;
+  min-height: 450px;
 
   & > * {
     max-width: 178px;
@@ -49,7 +49,7 @@ const ColumnWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
-    
+
     min-height: 1px;
     height: auto;
     width: 100%;
@@ -99,15 +99,15 @@ const Title = styled.div`
 const Desc = styled.div`
   padding: 7px 7px 2px;
   line-height: 1.75;
-  letter-spacing: -.3px;
+  letter-spacing: -0.3px;
 `;
 
 export const S = {
-    Skills,
-    Img,
-    ColumnWrapper,
-    Skill,
-    Box,
-    Title,
-    Desc
-}
+  Skills,
+  Img,
+  ColumnWrapper,
+  Skill,
+  Box,
+  Title,
+  Desc,
+};

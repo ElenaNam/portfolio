@@ -5,7 +5,6 @@ import { ProjectInterface } from "@data/types";
 import { S } from "../Projects_Styles";
 import { theme } from "@styles/Theme";
 
-
 export const Project: React.FC<ProjectInterface> = (props) => {
   return (
     <S.Project>
@@ -17,7 +16,13 @@ export const Project: React.FC<ProjectInterface> = (props) => {
         <h3>{props.title}</h3>
         <span>{props.desc}</span>
         <FlexWrapper gap="16px">
-          <Button as="a" href="" bgColor={theme.colors.accent} colored>
+          <Button
+            as="a"
+            href={props.link}
+            target="_blank"
+            bgColor={theme.colors.accent}
+            colored
+          >
             Live
           </Button>
           {props.isCached && (

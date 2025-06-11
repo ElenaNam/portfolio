@@ -4,6 +4,7 @@ import ImgProject3 from "../assets/images/project-term.png";
 import ImgProject4 from "../assets/images/project-tic.png";
 import ImgProject5 from "../assets/images/project-graf.png";
 import ImgProject6 from "../assets/images/project-green.png";
+import ImgProject7 from "../assets/images/project-prof.png";
 import { initialStateInterface, ProjectCats } from "./types";
 
 export const initialState: initialStateInterface = {
@@ -167,10 +168,21 @@ export const initialState: initialStateInterface = {
       id: 5,
       title: "Гринлайн",
       desc: "Luxury Vacation Property Services - St. Petersburg Area",
-      stack: ["Pug", "XML+XSLT", "PHP"],
+      stack: ["Pug", "Stylus", "XML+XSLT", "PHP"],
       task: "integration",
       link: "https://green-uk.ru/",
       imgSrc: ImgProject6,
+      isCached: false,
+      cat: ProjectCats.COM,
+    },
+    {
+      id: 6,
+      title: "Career Guide",
+      desc: "Universities and Colleges in St. Petersburg",
+      stack: ["Pug", "Stylus", "XML+XSLT", "PHP"],
+      task: "layout + integration",
+      link: "https://profession-online.ru/",
+      imgSrc: ImgProject7,
       isCached: false,
       cat: ProjectCats.COM,
     },
@@ -200,7 +212,7 @@ export const initialState: initialStateInterface = {
     {
       id: 4,
       title: "Libraries",
-      desc: "React Next.js ZOD Redux Toolkit+RTK Query Axios Jest+RTL jQuery MUI Styled_Components Storybook",
+      desc: "React Next.js ZOD Redux Toolkit+RTK Query Axios Jest+RTL jQuery MUI Radix  Styled_Components Storybook",
     },
   ],
 };
