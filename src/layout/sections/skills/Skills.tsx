@@ -4,10 +4,12 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import img from "../../../assets/images/skills.png";
 import { Skill } from "./skill/Skill";
 import { Container } from "../../../components/Container";
-import { S } from "./Skills_Styles"
-import { SkillsInterface } from "../../../data/interfaces";
+import { S } from "./Skills_Styles";
+import { SkillsInterface } from "../../../data/types";
 
-export const Skills: React.FC<{items: Array<SkillsInterface>}> = ({items}) => {
+export const Skills: React.FC<{ items: Array<SkillsInterface> }> = ({
+  items,
+}) => {
   return (
     <S.Skills>
       <Container>
@@ -17,7 +19,9 @@ export const Skills: React.FC<{items: Array<SkillsInterface>}> = ({items}) => {
         <FlexWrapper justify="space-between" wrap="wrap">
           <S.Img src={img} alt="" aria-hidden />
           <S.ColumnWrapper>
-            {items.map(item => <Skill key={item.id} title={item.title} desc={item.desc} />)}
+            {items.map((item) => (
+              <Skill key={item.id} title={item.title} desc={item.desc} />
+            ))}
           </S.ColumnWrapper>
         </FlexWrapper>
       </Container>

@@ -1,10 +1,10 @@
 import React from "react";
 
-import { Logo } from "../../components/logo/Logo";
+import { Logo } from "@components/logo/Logo";
 import { DesktopMenu } from "./headerMenu/desktopMenu/DesktopMenu";
-import { Container } from "../../components/Container";
-import { FlexWrapper } from "../../components/FlexWrapper";
-import { MenuItemInterface, SocialItemInterface } from "../../data/interfaces";
+import { Container } from "@components/Container";
+import { FlexWrapper } from "@components/FlexWrapper";
+import { MenuItemInterface, SocialItemInterface } from "@data/types";
 import { MobileMenu } from "./headerMenu/mobileMenu/MobileMenu";
 import { S } from "./Header_Styles";
 
@@ -18,7 +18,6 @@ export const Header: React.FC<{
   menu: Array<MenuItemInterface>;
   mobileList: Array<SocialItemInterface>;
 }) => {
-
   const [width, SetWidth] = React.useState(window.innerWidth);
   const [scrolled, setScrolled] = React.useState(false);
 

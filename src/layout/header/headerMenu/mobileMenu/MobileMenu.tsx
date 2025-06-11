@@ -1,9 +1,6 @@
 import React from "react";
 import { Socials } from "../../../../components/socials/Socials";
-import {
-  MenuItemInterface,
-  SocialItemInterface,
-} from "../../../../data/interfaces";
+import { MenuItemInterface, SocialItemInterface } from "../../../../data/types";
 import { Menu } from "../menu/Menu";
 import { S } from "../HeaderMenu_Styles";
 
@@ -15,7 +12,7 @@ export const MobileMenu: React.FC<{
 
   const handleClick = () => {
     setOpen(!isOpen);
-  }
+  };
 
   return (
     <S.MobileNav>

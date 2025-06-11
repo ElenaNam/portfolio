@@ -1,13 +1,15 @@
 import React from "react";
 
-import { FlexWrapper } from "../../components/FlexWrapper";
+import { FlexWrapper } from "@components/FlexWrapper";
 import { MediaBox } from "./mediaBox/MediaBox";
-import { Logo } from "../../components/logo/Logo";
-import { Container } from "../../components/Container";
-import { SocialItemInterface } from "../../data/interfaces";
-import { S } from "./Footer_Styles"
+import { Logo } from "@components/logo/Logo";
+import { Container } from "@components/Container";
+import { SocialItemInterface } from "@data/types";
+import { S } from "./Footer_Styles";
 
-export const Footer: React.FC<{socials: Array<SocialItemInterface>}> = ({socials}) => {
+export const Footer: React.FC<{ socials: Array<SocialItemInterface> }> = ({
+  socials,
+}) => {
   return (
     <S.Footer>
       <Container>
@@ -15,7 +17,9 @@ export const Footer: React.FC<{socials: Array<SocialItemInterface>}> = ({socials
           <div>
             <FlexWrapper wrap="wrap">
               <Logo />
-              <S.Link href="mailto:el-ki-ri@yandex.ru">el-ki-ri@yandex.ru</S.Link>
+              <S.Link href="mailto:el-ki-ri@yandex.ru">
+                el-ki-ri@yandex.ru
+              </S.Link>
             </FlexWrapper>
             <S.Text>Front-end developer</S.Text>
           </div>

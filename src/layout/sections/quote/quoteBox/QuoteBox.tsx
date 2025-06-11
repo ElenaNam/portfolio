@@ -1,5 +1,5 @@
 import React from "react";
-import { FlexWrapper } from "../../../../components/FlexWrapper";
+import { FlexWrapper } from "@components/FlexWrapper";
 import { S } from "../Quote_Styles"
 
 type QuoteBoxType = {

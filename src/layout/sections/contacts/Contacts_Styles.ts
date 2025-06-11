@@ -15,7 +15,7 @@ const Contacts = styled.section`
 `;
 
 const Text = styled.p`
-  max-width: 465px;
+  max-width: 500px;
   font-weight: 500;
   line-height: 1.32;
 `;

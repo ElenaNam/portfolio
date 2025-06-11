@@ -31,7 +31,7 @@ const Project = styled.div`
 
   flex-shrink: 0;
   border: 1px solid ${theme.colors.secondary};
-  transition: .3s;
+  transition: 0.3s;
 
   h3 {
     ${font({ Fmin: 22, Fmax: 24, weight: 500, color: theme.colors.main })};
@@ -45,16 +45,35 @@ const Project = styled.div`
     font-size: 16px;
   }
 
-  &:hover { 
+  &:hover {
     //transform: translateY(-2px);
-    box-shadow: 3px 3px 8px -4px  ${theme.colors.add};
-    background-color: #7a797718;;
+    box-shadow: 3px 3px 8px -4px ${theme.colors.add};
+    background-color: #7a797718;
   }
 
   @media ${theme.media.mobile} {
     max-width: 330px;
   }
 `;
+
+const ProjectsSection = styled.section`
+  margin: 45px auto 15px;
+  padding: 0;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+`;
+const ProjectsSectionTitle = styled.h3`
+  ${font({ Fmin: 24, Fmax: 28, weight: 500, lineHeight: 1.32 })};
+
+  display: inline-block;
+  margin: 0 auto 15px;
+  color: ${theme.colors.main};
+  text-transform: lowercase;
+  text-align: center;
+`;
+
 const Image = styled.img`
   width: 100%;
   height: 201px;
@@ -72,12 +91,59 @@ const Stack = styled.div`
   border-bottom: 1px solid ${theme.colors.secondary};
 `;
 
-export const S = {
-    Projects,
-    Link,
-    Project,
-    Image,
-    Info,
-    Stack
-}
+const Task = styled.div`
+  display: inline-block;
+  color: ${theme.colors.accent};
+`;
 
+const CarouselWrapper = styled.div`
+  position: relative;
+
+  .alice-carousel__stage {
+    margin: 0;
+  }
+`;
+
+const NavButton = styled.button<{ left?: boolean; right?: boolean }>`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  ${({ left }) => left && "left: -40px;"}
+  ${({ right }) => right && "right: -40px;"}
+
+  ${({ right }) =>
+    right &&
+    `
+    svg {
+      transform: rotate(180deg);
+    }
+  `}
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &:hover {
+    color: ${theme.colors.accent};
+  }
+`;
+
+export const S = {
+  Projects,
+  ProjectsSection,
+  ProjectsSectionTitle,
+  Link,
+  Project,
+  Image,
+  Info,
+  Stack,
+  Task,
+  CarouselWrapper,
+  NavButton,
+};

@@ -37,6 +37,21 @@ const Info = styled.div`
 const Text = styled.p`
   margin-bottom: 27px;
   line-height: 1.625;
+
+  a {
+    color: ${theme.colors.accent};
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.9;
+      border-color: ${theme.colors.accent};
+    }
+  }
+
+  span {
+    white-space: nowrap;
+  }
 `;
 
 const Img = styled.img`
@@ -53,8 +68,8 @@ const Img = styled.img`
 `;
 
 export const S = {
-    About,
-    Info,
-    Text,
-    Img
-}
+  About,
+  Info,
+  Text,
+  Img,
+};
