@@ -14,7 +14,7 @@ export const initialState: initialStateInterface = {
       width: "32px",
       height: "32px",
       viewBox: "0 0 32 32",
-      link: "https://github.com/ElenaNam",
+      link: "https://github.com/elkirillova",
     },
     {
       id: 1,
@@ -40,7 +40,7 @@ export const initialState: initialStateInterface = {
       width: "64px",
       height: "64px",
       viewBox: "0 0 32 32",
-      link: "https://github.com/ElenaNam",
+      link: "https://github.com/elkirillova",
     },
     {
       id: 1,
@@ -66,7 +66,7 @@ export const initialState: initialStateInterface = {
       width: "32px",
       height: "32px",
       viewBox: "3 3 26 26",
-      link: "https://github.com/ElenaNam",
+      link: "https://github.com/elkirillova",
     },
     {
       id: 1,
@@ -147,7 +147,7 @@ export const initialState: initialStateInterface = {
       title: "Tic-tac-toe",
       desc: "Play Tic-Tac-Toe Online",
       stack: ["React", "MUI", "TypeScript"],
-      link: "https://elenanam.github.io/react-game/tic-tac-toe/",
+      link: "https://elkirillova.github.io/react-game/tic-tac-toe/",
       imgSrc: ImgProject4,
       isCached: false,
       cat: ProjectCats.EDU,
