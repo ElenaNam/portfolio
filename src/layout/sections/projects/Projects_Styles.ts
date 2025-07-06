@@ -31,7 +31,7 @@ const Project = styled.div`
 
   flex-shrink: 0;
   border: 1px solid ${theme.colors.secondary};
-  transition: .3s;
+  transition: 0.3s;
 
   h3 {
     ${font({ Fmin: 22, Fmax: 24, weight: 500, color: theme.colors.main })};
@@ -45,10 +45,10 @@ const Project = styled.div`
     font-size: 16px;
   }
 
-  &:hover { 
+  &:hover {
     //transform: translateY(-2px);
-    box-shadow: 3px 3px 8px -4px  ${theme.colors.add};
-    background-color: #7a797718;;
+    box-shadow: 3px 3px 8px -4px ${theme.colors.add};
+    background-color: #7a797718;
   }
 
   @media ${theme.media.mobile} {
@@ -72,7 +72,6 @@ const ProjectsSectionTitle = styled.h3`
   color: ${theme.colors.main};
   text-transform: lowercase;
   text-align: center;
-
 `;
 
 const Image = styled.img`
@@ -94,18 +93,57 @@ const Stack = styled.div`
 
 const Task = styled.div`
   display: inline-block;
-  color: ${theme.colors.accent}
+  color: ${theme.colors.accent};
+`;
+
+const CarouselWrapper = styled.div`
+  position: relative;
+
+  .alice-carousel__stage {
+    margin: 0;
+  }
+`;
+
+const NavButton = styled.button<{ left?: boolean; right?: boolean }>`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  ${({ left }) => left && "left: -40px;"}
+  ${({ right }) => right && "right: -40px;"}
+
+  ${({ right }) =>
+    right &&
+    `
+    svg {
+      transform: rotate(180deg);
+    }
+  `}
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &:hover {
+    color: ${theme.colors.accent};
+  }
 `;
 
 export const S = {
-    Projects,
-    ProjectsSection,
-    ProjectsSectionTitle,
-    Link,
-    Project,
-    Image,
-    Info,
-    Stack,
-    Task
-}
-
+  Projects,
+  ProjectsSection,
+  ProjectsSectionTitle,
+  Link,
+  Project,
+  Image,
+  Info,
+  Stack,
+  Task,
+  CarouselWrapper,
+  NavButton,
+};
