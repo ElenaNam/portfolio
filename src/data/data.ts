@@ -5,6 +5,7 @@ import ImgProject4 from "../assets/images/project-tic.png";
 import ImgProject5 from "../assets/images/project-graf.png";
 import ImgProject6 from "../assets/images/project-green.png";
 import ImgProject7 from "../assets/images/project-prof.png";
+import ImgProject8 from "../assets/images/project-todo.png";
 import { initialStateInterface, ProjectCats } from "./types";
 
 export const initialState: initialStateInterface = {
@@ -125,11 +126,19 @@ export const initialState: initialStateInterface = {
     },
     {
       id: 1,
-      title: "15-puzzle",
-      desc: "Play 15-puzzle online",
-      stack: ["HTML", "CSS", "JavaScript"],
-      link: "https://rolling-scopes-school.github.io/elenanam-JS2020Q3/codejam-the-gem-puzzle/",
-      imgSrc: ImgProject2,
+      title: "Task Manager",
+      desc: "Smart task tracking with filters and pagination",
+      stack: [
+        "React",
+        "React_Router",
+        "RHF",
+        "RTK_Query",
+        "REST",
+        "TypeScript",
+        "MUI",
+      ],
+      link: "https://elkirillova.github.io/todolist/",
+      imgSrc: ImgProject8,
       isCached: false,
       cat: ProjectCats.EDU,
     },
@@ -185,6 +194,16 @@ export const initialState: initialStateInterface = {
       imgSrc: ImgProject7,
       isCached: false,
       cat: ProjectCats.COM,
+    },
+    {
+      id: 7,
+      title: "15-puzzle",
+      desc: "Play 15-puzzle online",
+      stack: ["HTML", "CSS", "JavaScript"],
+      link: "https://rolling-scopes-school.github.io/elenanam-JS2020Q3/codejam-the-gem-puzzle/",
+      imgSrc: ImgProject2,
+      isCached: false,
+      cat: ProjectCats.EDU,
     },
   ],
   skills: [
